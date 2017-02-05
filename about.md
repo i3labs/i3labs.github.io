@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+i3labs.org is the online store of activities for Vineet Sinha.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+Vineet is a passionate coder and proponent of rethinking interfaces for users. He has spent the last ten years building intuitive and innovative interfaces for users to understand and work with large pieces of information. He has done these at Microsoft, Accenture Technology Labs, Motorola, as well as the focus for his PhD at MIT CSAIL.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Vineet focuses on building prototypes, and ensuring rapid product iterations to meet customers needs. In addition, He mentors development teams, manages the central architecture of the product line, resolves performance challenges, and integrates different systems.
+
+Specialties: Building User-Centered Interfaces through the application of Machine Learning, Information Retrieval, and Knowledge-Based techniques. Experience with interactive web applications (AJAX/Web 2.0 approaches), mobile applications, and the use of performance analyses to build scalable systems.
+
+Technologies: Extensive experience building with Javascript (Node.js / Angular), Java (including Android), and Actionscript/MXML/Flex. Experience with NoSQL databases, in particular MongoDB, and design of systems for high scalability. Prior background in C/C++ and Assembly, as well as multiple frameworks J2EE, JAX-RS, JDBC, Hibernate, Struts/Tiles, Spring, Grails and Rails.
