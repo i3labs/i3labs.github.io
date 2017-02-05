@@ -4,6 +4,7 @@ title:  "Another blog is born"
 date:   2015-04-03 00:00:00 -0500
 categories: about
 ---
+<img src="http://i3labs.org/wp-content/uploads/2015/04/hello_world_medium-300x169.jpg" alt="hello_world_medium" width="300" height="169" style="0.857142857rem 0 0.857142857rem 1.714285714rem; border-radius: 3px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); float:right" />
 Over the past few years I have had the fortune of writing papers, blogging both publicly and internally for the companies I have worked at, teaching, and even presenting at conferences. This blog is an attempt at pulling all that knowledge into a single place.
 
 Oh, and part of the agenda is also a home for open sourcing projects that I care about.

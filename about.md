@@ -3,6 +3,10 @@ layout: page
 title: About
 permalink: /about/
 ---
+<div style="float:right;position:relative;top:-25px;height:180px">
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/vineetsinha" data-format="inline" data-related="false"></script>
+</div>
 
 i3labs.org is the online store of activities for Vineet Sinha.
 

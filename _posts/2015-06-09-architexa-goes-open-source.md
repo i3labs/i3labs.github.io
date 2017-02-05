@@ -4,6 +4,7 @@ title:  "Architexa goes Open Source"
 date:   2015-06-09 00:00:00 -0500
 categories: projects architexa
 ---
+<img src="http://i3labs.org/wp-content/uploads/2015/06/architexa_logo_icon.png" alt="architexa_logo_icon" width="99" height="99" style="0.857142857rem 0 0.857142857rem 1.714285714rem; border-radius: 3px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); float:right" />
 The dream behind Architexa started when I was working on my PhD. I realized that as programmers, we often have to look at a lot of code. And, that if we have tools to help experienced programmers get a better view of the code (and in particular its architecture), we could save them a lot of time.
 
 The underlying stats are shocking – coders spend 5x as much time modifying code than writing new code and 3x as much time understanding code than modifying code (more – When Understanding means Rewriting). With that, the work started first as a tool (Relo) to create box-and-arrow diagrams (like class-diagrams) using the code as a guide. It then added another tool (Strata) to guesstimate a layered-architectural-diagram using code dependencies with heuristics for breaking cycles. And, finally with Architexa we added a tool to show run time information in code using sequence diagrams.
