@@ -23,6 +23,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://i3labs.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: VineetSinha
 github_username:  vineet-sinha
+repository: i3labs/i3labs.github.io
 
 # Build settings
 markdown: kramdown
