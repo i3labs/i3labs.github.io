@@ -1,8 +1,14 @@
 <header class="site-header" role="banner">
 
-  <div class="wrapper">
+    <div class="site-title">
+      <a href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    </div>
+    <div class="site-description">
+      <p>{{ site.description | escape }}</p>
+    </div>
 
-    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+</header>
+<header class="site-menu">
 
     <nav class="site-nav">
       <span class="menu-icon">
@@ -21,7 +27,5 @@
         {% endfor %}
       </div>
     </nav>
-
-  </div>
 
 </header>
