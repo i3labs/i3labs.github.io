@@ -8,7 +8,9 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-permalink: /:categories/:title
+# permalink: /:categories/:year/:month/:day/:title/ # <-- default
+#permalink: /:categories/:title
+permalink: /:year/:month/:title
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
