@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 <div style="float:right;position:relative;top:-25px;height:180px">
 <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
