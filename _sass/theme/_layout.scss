@@ -38,31 +38,10 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
-}
-
-
-.site-nav {
-  float: left;
-  line-height: 46px;
 
   .menu-icon {
     display: none;
   }
-
-  .menu-item {
-    //color: $text-color;
-    color: #6a6a6a;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-  .no-link:hover {
-    text-decoration: none;
-  }
-
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
@@ -96,7 +75,32 @@
       padding-bottom: 5px;
     }
 
-    .page-link {
+  }
+}
+
+
+.site-nav {
+  float: left;
+  line-height: 46px;
+
+  .menu-item {
+    //color: $text-color;
+    color: #6a6a6a;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .no-link:hover {
+    text-decoration: none;
+  }
+
+  @include media-query($on-palm) {
+    float: none;
+
+    .menu-item {
       display: block;
       padding: 5px 10px;
 
@@ -112,10 +116,7 @@
   line-height: 46px;
 
   @include media-query($on-palm) {
-    .trigger {
-      clear: both;
-      display: none;
-    }
+    float: none;
   }
 }
 
