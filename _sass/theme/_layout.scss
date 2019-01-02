@@ -42,14 +42,14 @@
 
 
 .site-nav {
-  float: right;
+  float: left;
   line-height: 46px;
 
   .menu-icon {
     display: none;
   }
 
-  .page-link {
+  .menu-item {
     //color: $text-color;
     color: #6a6a6a;
     line-height: $base-line-height;
@@ -58,6 +58,9 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+  }
+  .no-link:hover {
+    text-decoration: none;
   }
 
   @include media-query($on-palm) {
@@ -71,7 +74,7 @@
 
     .menu-icon {
       display: block;
-      float: right;
+      float: left;
       width: 36px;
       height: 26px;
       line-height: 0;
@@ -104,7 +107,17 @@
     }
   }
 }
+.site-search {
+  float: right;
+  line-height: 46px;
 
+  @include media-query($on-palm) {
+    .trigger {
+      clear: both;
+      display: none;
+    }
+  }
+}
 
 
 /**

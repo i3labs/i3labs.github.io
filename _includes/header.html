@@ -20,9 +20,22 @@
       </span>
 
       <div class="trigger">
-        <a class="page-link" href="/projects">Projects</a>
-        <a class="page-link" href="/about">About</a>
+        <a {% if page.url == '/' %}class="menu-item no-link"{% else %}class="menu-item" href="/"{% endif %}>Articles</a>
+        <a {% if page.url == '/projects' %}class="menu-item no-link"{% else %}class="menu-item" href="/projects"{% endif %}>Projects</a>
+        <a {% if page.url == '/about' %}class="menu-item no-link"{% else %}class="menu-item" href="/about"{% endif %}>About</a>
       </div>
+    </nav>
+
+    <nav class="site-search">
+      <aside id="search" class="widget widget_search trigger">
+        <form id="searchform" class="searchform" role="search" method="get" action="http://i3labs.org/">
+          <div>
+            <label class="screen-reader-text" for="s" style="display:none">Search for:</label>
+            <input type="text" value="" name="s" id="s">
+            <input type="submit" id="searchsubmit" value="Search">
+          </div>
+        </form>
+      </aside>
     </nav>
 
 </header>
