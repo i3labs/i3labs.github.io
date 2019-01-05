@@ -7,8 +7,6 @@ title: About
 <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/vineetsinha" data-format="inline" data-related="false"></script>
 </div>
 
-i3labs.org is the online store of activities for Vineet Sinha.
-
 Vineet is a passionate coder and proponent of rethinking interfaces for users. He has spent the last ten years building intuitive and innovative interfaces for users to understand and work with large pieces of information. He has done these at Microsoft, Accenture Technology Labs, Motorola, as well as the focus for his PhD at MIT CSAIL.
 
 Vineet focuses on building prototypes, and ensuring rapid product iterations to meet customers needs. In addition, He mentors development teams, manages the central architecture of the product line, resolves performance challenges, and integrates different systems.
