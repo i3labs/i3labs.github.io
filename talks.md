@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Presentations & Publications
+title: Articles & Talks
 ---
 <style type="text/css">
   ul {
