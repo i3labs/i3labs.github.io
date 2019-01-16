@@ -17,13 +17,13 @@ permalink: /:year/:month/:title
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Big Data, Adaptive Software, and Smart Interfaces"
+title: "Making Software Smarter"
 author: Vineet Sinha
 email: vineet.sinha@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Experiments in Intelligent, Insightful, and Intuitive
+  Experiments in Intelligent, Insightful, and Intuitive Computing
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://i3labs.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://i3labs.org/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: VineetSinha
 github_username:  vineet-sinha
 repository: i3labs/i3labs.github.io
