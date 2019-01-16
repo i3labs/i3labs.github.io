@@ -93,7 +93,10 @@
       margin-right: 20px;
     }
   }
-  .no-link:hover {
+  .active:before {
+    content: '>> ';
+  }
+  .active:hover {
     text-decoration: none;
   }
 
