@@ -210,9 +210,11 @@
 .content {
   float: left;
   max-width: 80%;
+  max-width: 590px;
 }
 .sidebar {
   float: right;
+  max-width: 240px;
 }
 
 .post-list {
