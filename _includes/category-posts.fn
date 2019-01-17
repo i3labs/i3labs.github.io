@@ -1,0 +1,30 @@
+{% comment %}
+ category-posts: based on the atxa fn - a category (cat) to output
+ almost identical to home.html
+{% endcomment %}
+
+<h2 class="page-title">{{include.cat}}</h2>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  {% if post.categories contains {{include.cat}} %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h2>
+      <div class="post-meta">
+        In
+        {% for category in post.categories %}
+              <a href="{{ "/category/" | relative_url }}{{category | replace:"&amp;","&" | slugify}}/">{{category}}</a>{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+        on {{ post.date | date: "%b %-d, %Y" }}
+      </div>
+      <div>
+        {{post.excerpt}}
+      </div>
+      <div>
+        <a href="{{ post.url | relative_url }}">Read More &rsaquo;&rsaquo;</a>
+    </li>
+  {% endif %}
+  {% endfor %}
+</ul>
