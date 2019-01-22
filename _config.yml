@@ -13,7 +13,7 @@
 permalink: /:year/:month/:title
 excerpt_separator: <!--more-->
 paginate: 10
-paginate_path: "/page/:num/"
+paginate_path: "/blog/page/:num"
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
