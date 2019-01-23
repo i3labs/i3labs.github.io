@@ -24,7 +24,7 @@ title: "Making Software Smarter"
 author: Vineet Sinha
 email: vineet.sinha@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Experiments in Intelligent, Insightful, and Intuitive Computing
+  A Journey into Intelligent, Insightful, and Intuitive Computing
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://i3labs.org/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: VineetSinha
