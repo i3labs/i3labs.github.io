@@ -20,7 +20,7 @@ paginate_path: "/blog/page/:num"
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Making Software Smarter"
+title: "Building Intelligent, Insightful, and Intuitive Software"
 author: Vineet Sinha
 email: vineet.sinha@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
