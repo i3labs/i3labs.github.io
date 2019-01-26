@@ -12,11 +12,11 @@
 }
 
 .site-title {
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 24px;
+  // font-weight: bold;
   line-height: 56px;
   //letter-spacing: -1px;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 
 
   & a:visited {
@@ -134,7 +134,7 @@
 
 .footer-heading {
   font-size: 18px;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: 0px;
 }
 
 .contact-list,
@@ -273,32 +273,33 @@
 
 .post-title {
   /* h1 */
-  font-size: 26px;
-  letter-spacing: -1px;
-  line-height: 1;
+  font-size: 20px;
+  // letter-spacing: -1px;
+  // line-height: 1;
 
-  @include media-query($on-laptop) {
-    font-size: 36px;
-  }
+  // @include media-query($on-laptop) {
+  //   font-size: 36px;
+  // }
 }
 
 .post-content {
   margin-bottom: $spacing-unit;
 
   h2 {
-    font-size: 22px;
+    font-size: 18px;
+    margin-bottom: 0px;
 
-    @include media-query($on-laptop) {
-      font-size: 22px;
-    }
+    // @include media-query($on-laptop) {
+    //   font-size: 22px;
+    // }
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 14px;
 
-    @include media-query($on-laptop) {
-      font-size: 18px;
-    }
+    // @include media-query($on-laptop) {
+    //   font-size: 18px;
+    // }
   }
 
   h4 {
