@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Waterfall Model is not all bad (and some lessons for agile teams)
+image: /assets/uploads/2010/04/real_waterfall-231x300.jpg
 date: 2010-05-03T06:37:35+00:00
 author: Vineet Sinha
 categories: Development

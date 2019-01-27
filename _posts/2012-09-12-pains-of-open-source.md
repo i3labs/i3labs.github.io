@@ -1,17 +1,11 @@
 ---
 layout: post
 title: Pains of Open Source
+image: /assets/uploads/2012/05/Open-Source-1-300x269.jpg
 date: 2012-09-12T15:27:05+00:00
 categories: Development
 author: Vineet Sinha
 ---
-<!--S-ButtonZ 1.1.5 Start-->
-
-<div style="float: left; width: 42px; padding-right: 10px; margin: 0 -52px 0 0; position: relative; left: -62px; top: 8px">
-</div>
-
-<!--S-ButtonZ 1.1.5 End-->
-
 <img class="alignright size-medium wp-image-350" title="Open-Source" src="{{site.baseurl}}/assets/uploads/2012/05/Open-Source-1-300x269.jpg" alt="" width="210" height="188" srcset="{{site.baseurl}}/assets/uploads/2012/05/Open-Source-1-300x269.jpg 300w, {{site.baseurl}}/assets/uploads/2012/05/Open-Source-1.jpg 550w" sizes="(max-width: 210px) 100vw, 210px" />I am a big fan of open source. I use it every day, and recommend it often. But I do want to have a balanced perspective on it. I recently posted about the [pleasures of using open source](/2012/05/pleasures-of-open-source/). This is the other side of the coin, the pains of using it.
 
 My hidden agenda about talking about such problems with open source usage is so that we as a community can come up with solutions to some of these challenges. But first, I really want to hear and write down the main challenges, so that we fix the right problems.<!--more-->

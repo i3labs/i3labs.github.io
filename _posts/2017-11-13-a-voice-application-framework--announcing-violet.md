@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "A Voice Application Framework: Announcing Violet"
+image:  "/assets/uploads/2017/11/violet.png"
 date:   2017-11-13 00:00:00 -0500
 categories: Projects Voice
+author: Vineet Sinha
 ---
 <img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
 

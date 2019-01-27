@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Code on Different Types of Codebases
+image: /assets/uploads/2013/01/allianz-arena-300x148.jpg
 date: 2013-01-28T17:36:11+00:00
 categories: Development
 author: Vineet Sinha

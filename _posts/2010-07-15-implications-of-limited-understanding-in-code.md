@@ -1,17 +1,12 @@
 ---
 layout: post
 title: Implications of limited understanding in code..
+image: http://www.architexa.com/images/AgileandErosion.png
 date: 2010-07-15T23:50:54+00:00
 author: Vineet Sinha
 categories: Development
 ---
-<div style="float: right; margin: -5px 0 -5px 10px;">
-  <a href="http://www.architexa.com/images/AgileandErosion.png"><img class="alignright" style="border: 0px initial initial;" src="http://www.architexa.com/images/AgileandErosion.png" border="0" alt="" width="300" height="200" /></a>
-
-  <p>
-    <a title="Challenges of Software Development Cycle" rel="prettyPhoto" href="http://www.architexa.com/images/AgileandErosion.png"><br /> </a>
-  </p>
-</div>
+<img src="http://www.architexa.com/images/AgileandErosion.png" border="0" alt="" width="300" height="200" />
 
 We know that programmers do spend a [lot of time understanding code](http://blog.architexa.com/2010/05/no-you-are-not-dumb-programmers-do-spend-a-lot-of-time-understanding-code/). But what is not discussed as much are the implications of this limited understanding.
 

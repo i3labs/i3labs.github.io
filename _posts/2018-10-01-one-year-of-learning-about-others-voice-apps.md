@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "One year of learning from others about their experiences"
+image:  "/assets/uploads/2017/11/violet.png"
 date:   2018-10-01 00:00:00 -0500
 categories: Projects Voice
+author: Vineet Sinha
 ---
 <img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
 

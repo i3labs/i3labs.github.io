@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Wasting Time With Test Driven Development?
+image: /assets/uploads/2010/08/test-300x225.jpg
 date: 2010-08-05T19:51:29+00:00
 author: Vineet Sinha
 categories: Development

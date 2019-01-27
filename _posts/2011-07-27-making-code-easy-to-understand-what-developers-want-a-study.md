@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Making Code Easy to Understand - What Developers Want (a study)'
+image: /assets/uploads/2011/05/graph2-300x178.png
 date: 2011-07-27T08:10:01+00:00
 author: Vineet Sinha
 categories: Development

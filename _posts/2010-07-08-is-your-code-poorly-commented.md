@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Is your code poorly commented? Three indicators..
+image: /assets/uploads/2010/07/comic-book-guy-comment-sc1.jpg
 date: 2010-07-08T20:45:49+00:00
 author: Vineet Sinha
 categories: Development

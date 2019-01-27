@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Developer responsibility in Agile teams
+image: /assets/uploads/2010/04/posItNotes.jpg
 date: 2010-04-21T17:04:31+00:00
 author: Vineet Sinha
 categories: Development

@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Architexa goes Open Source"
+image:  "/assets/uploads/2015/06/architexa_logo_icon.png"
 date:   2015-06-09 00:00:00 -0500
 categories: Projects Architexa
+author: Vineet Sinha
 ---
 <img src="/assets/uploads/2015/06/architexa_logo_icon.png" alt="architexa_logo_icon" width="99"/>
 The dream behind Architexa started when I was working on my PhD. I realized that as programmers, we often have to look at a lot of code. And, that if we have tools to help experienced programmers get a better view of the code (and in particular its architecture), we could save them a lot of time.

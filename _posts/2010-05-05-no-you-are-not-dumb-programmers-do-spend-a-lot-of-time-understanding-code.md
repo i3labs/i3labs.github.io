@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'No, You are not Dumb! Programmers do spend a lot of time Understanding Code...'
+image: /assets/uploads/2010/05/Fotolia_11453646_XS.jpg
 date: 2010-05-05T18:49:32+00:00
 author: Vineet Sinha
 categories: Development
