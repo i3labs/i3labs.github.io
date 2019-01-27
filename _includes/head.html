@@ -1,29 +1,41 @@
+{% if page.title %}
+  {% assign myTitle = page.title | escape %}
+{% else %}
+  {% assign myTitle = site.title | escape %}
+{% endif %}
+{% assign myDescription = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
+{% assign myUrl = page.url | replace:'index.html','' | absolute_url %}
+{% if page.image %}
+  {% assign myImage = page.image | absolute_url %}
+{% else %}
+  {% assign myImage = 'https://i3labs.org/assets/vineet-sinha-wide.jpg' %}
+{% endif %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <title>{{myTitle}}</title>
+  <meta name="title" content="{{myTitle}}">
+  <meta name="description" content="{{myDescription}}">
 
   <link rel="icon" type="image/png" href="/assets/i3.svg">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="canonical" href="{{myUrl}}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta property="og:image" content="https://i3labs.org/assets/vineet-sinha-wide.jpg">
+  <meta property="og:url" content="{{myUrl}}">
+  <meta property="og:title" content="{{myTitle}}">
+  <meta property="og:description" content="{{myDescription}}">
+  <meta property="og:image" content="{{myImage}}">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <meta property="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-  <meta property="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta property="twitter:image" content="https://i3labs.org/assets/vineet-sinha-wide.jpg">
+  <meta property="twitter:url" content="{{myUrl}}">
+  <meta property="twitter:title" content="{{myTitle}}">
+  <meta property="twitter:description" content="{{myDescription}}">
+  <meta property="twitter:image" content="{{myImage}}">
 
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
