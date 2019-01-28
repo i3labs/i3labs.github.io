@@ -12,11 +12,13 @@ The last year has been a fun ride. Since we open-sourced and started talking abo
 
 Not only have we built these into Violet, but we have also been talking about them at different places.<!--more-->
 
-## A Conversational Flow Language & the VOICE Summit
+## A Conversational Flow Language
 
 We learned that the temporal nature of voice and users earlier familiarity with speech means that getting the User Experience right in the Voice world is far harder than in a Mobile or Web world.
 
-Not only do teams need to spend time designing a good voice conversation, but they also need to iterate on the voice scripts once they have it implemented. This iteration can often be hard because of the large amount of state-management code in most Voice Apps.
+Team end up needing to spend a fair bit of effort designing a good voice conversation. We have therefore pulled together a number of [Conversation Design Resources](https://helloviolet.ai/docs/conversation-design-resources).
+
+Beyond just designing a good voice conversation, teams need to also iterate on the voice scripts once they have it implemented. This iteration can often be hard because of the large amount of state-management code in most Voice Apps.
 
 We noticed that Voice Apps essentially consisted of one of a few 'user-experience design patterns'. These design patterns resulted in us defining an HTML-inspired [Conversational Flow Language](https://helloviolet.ai/docs/conversation-flow-design) (and added support for it into Violet).
 
