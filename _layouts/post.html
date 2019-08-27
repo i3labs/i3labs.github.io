@@ -10,7 +10,11 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+    <p class="hr-above" style="padding-top:0.5em">
+      I am posting new articles roughly once a month. Interested in getting notified? <a href="/#subscribe">Sign up here</a>.
+    </p>
   </div>
+
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}

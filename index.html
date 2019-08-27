@@ -4,19 +4,18 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
-<div class="content" style="margin-bottom:20px;">
+<div class="homepage content" style="margin-bottom:20px;">
   <div style="float:left;width:calc( (640px/4) - (30px/4) );">
     <div id="vineet-picture"></div>
     <div style="text-align:center;font-weight:bold;">Vineet Sinha</div>
   </div>
   <div style="float:left;max-width:calc( (640px*3/4) - (30px*3/4) );">
     <p>I love challenging norms by evolving technologies to make users' lives better. These days, I am exploring a lot of Emerging Technologies, especially Voice and AI. <a href="/about">Read more &rsaquo;&rsaquo;</a></p>
-    <p>You can follow me <a href="{{ "/feed.xml" | relative_url }}">via RSS</a> or <a href="https://twitter.com/VineetSinha">on Twitter</a>.</p>
     <small><i>Opinions here are based on my experiences and do not represent that of any organization that I might be affiliated with.</i></small>
   </div>
 </div>
 
-<div class="half-col">
+<div class="homepage half-col">
   <div class="section-title">Writings</div>
   <ul class="post-list-x" style="list-style:none;margin-left:0px;">
     {% for post in site.posts limit: 3 %}
@@ -35,7 +34,7 @@ layout: default
   <p><a href="/blog">See More &rsaquo;&rsaquo;</a></p>
 </div>
 
-<div class="half-col">
+<div class="homepage half-col">
   <div class="section-title">Projects</div>
   <p>
     <a class="post-link-x" href="https://HelloViolet.ai">Violet</a> - An application framework to ease building great Voice Applications, by allowing you to seperate out Conversational Flow form Business Logic.
@@ -43,4 +42,29 @@ layout: default
   <p>
     <a class="post-link-x" href="https://implicit.io">Implicit.io</a> - An Education Platform for helping you stay up to date with techniques at your work.
   </p>
+</div>
+
+<div class="homepage content" style="margin-bottom:20px;">
+  <div class="section-title"><a class="no-link" name="subscribe">Follow Me</a></div>
+  <div style="float:left;max-width:calc( 640px - 30px );">
+    <p style="margin-bottom:0px">I am posting aticles and updates roughly once a month, sign up to get notified by e-mail:</p>
+    <!-- Begin Mailchimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #mc_embed_signup .button{color:inherit;}
+    </style>
+    <div id="mc_embed_signup">
+    <form action="https://gmail.us3.list-manage.com/subscribe/post?u=af4e7c26d7a5f371c7adc6bf0&amp;id=e23737fd11" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_af4e7c26d7a5f371c7adc6bf0_e23737fd11" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+    </form>
+    </div>
+
+    <!--End mc_embed_signup-->
+    <p>Alternatively, you can follow me <a href="https://twitter.com/VineetSinha">on Twitter</a> or <a href="{{ "/feed.xml" | relative_url }}">via RSS</a>.</p>
+  </div>
 </div>
