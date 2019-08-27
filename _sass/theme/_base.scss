@@ -205,6 +205,7 @@ pre {
   float: left;
   // margin-right: $spacing-unit/2;
   max-width: calc( (#{$content-width}/2) - (#{$spacing-unit}/2) );
+  width: calc( (#{$content-width}/2) - (#{$spacing-unit}/2) );
 
   .section-title {
     text-align: center;
