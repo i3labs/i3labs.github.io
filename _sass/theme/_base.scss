@@ -201,6 +201,21 @@ pre {
   @extend %clearfix
 }
 
+.homepage {
+  .section-title {
+    font-size: 125%;
+    margin-bottom: 5px;
+  }
+}
+
+a.no-link {
+  color:inherit;
+}
+
+a:hover.no-link {
+  text-decoration: none;
+}
+
 .half-col {
   float: left;
   // margin-right: $spacing-unit/2;
@@ -209,8 +224,6 @@ pre {
 
   .section-title {
     text-align: center;
-    font-size: 125%;
-    margin-bottom: 5px;
   }
 }
 .half-col + .half-col {
