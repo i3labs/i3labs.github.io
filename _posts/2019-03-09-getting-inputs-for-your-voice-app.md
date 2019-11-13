@@ -22,7 +22,7 @@ The easiest way to get input from your users is in getting a single value during
 > App: There are no game nights planned for **Friday**. Would you like to add one?  
 > User: No.
 
-To build this out, we will need to first tell the framework that we need to accept an input of type `date`.
+To build this out, we will need to first tell the framework that we need to accept an input of type `date`. Providing a type allows the underlying system to be smart. In this case, expecting a date allows for inputs to not only accept days of the week, but also commonly used "today", "tomorrow", or even "25th November".
 
 ```javascript
 violet.addInputTypes({
@@ -30,7 +30,7 @@ violet.addInputTypes({
 });
 ```
 
-In this case, we are calling the parameter `plannedDayQuery`, and once we have declared it to the framework we can use it anywhere in our conversations.
+Here, we are calling the parameter `plannedDayQuery`, and once we have declared it to the framework we can use it anywhere in our conversations.
 
 Building out the above conversation examples gives us the following conversation flow:
 
@@ -77,13 +77,19 @@ We are now able to get a single input from the user. The big challenge in collec
 
 We can definitely do this by having nested `decision` elements, with each having an `ask` and one or more `expecting` elements. However, this does get a little verbose.
 
-In the Voice world, support for these Voice Forms, is provided by what is often referred to as 'muli-turn conversations' or 'dialogs'.
+In the Voice world, support for these Voice Forms, is provided by what is often referred to as 'multi-turn conversations' or 'dialogs'.
 
-You can do this in Violet by crating a `dialog` element consisting of multiple `item` that can to be provided by the user. Items are unique in that like decisions they consist of an `ask` element to prompt the user, as well as similar to choices they consist of in that they consist of an `expecting` element that defines what the user can say. The dialog prompts users based on the items returned by the `elicit` attribute, and the provided `dialog.nextReqdParam()` implements requesting all the items that have been tagged as `required`.
+You can do this in Violet by adding a `dialog` element  consisting of multiple `item` elements. These items are values to be provided by the user. Items are unique in that like decisions they consist of an `ask` element to prompt the user, but like choices they consist of an `expecting` element that defines what the user can say. The dialog prompts users based on the items returned by the `elicit` attribute, and the provided `dialog.nextReqdParam()` implements requesting all the items that have been tagged as `required`.
 
 ## Designing our Voice Form
 
-So lets get back to adding data to our Game Night App. We likely want to see something like:
+So lets get back to adding data to our Game Night App. The interaction could go something like:
+
+> User: I'm looking to organize a game night for 3 hours on Thursday to play Chess over Dinner.
+> App: Let me see what I can do.
+> App: Great, you are all set.
+
+More realistically, users have a hard time remembering all the details in shot and often give the information one-by-one. We therefore likely want to see something like:
 
 > User: I'm looking to organize a game night.  
 > App: What day would you like it to be on?  
@@ -103,6 +109,11 @@ In the above the day, the duration, the game, and the food would be items. Creat
 <app>
   <!-- ... -->
   <dialog id="create" elicit="dialog.nextReqdParam()">
+      <!-- allow the user to give us all the information -->
+      <expecting>I'm looking to organize a game night for [[duration]]
+                 hours on [[day]] to play [[game]] over [[food]]
+      </expecting>
+      <!-- setup up a more realistic multi-turn dialog -->
       <expecting>I'm looking to organize a game night</expecting>
       <item name="day" required>
         <ask>What day would you like it to be on?</ask>
