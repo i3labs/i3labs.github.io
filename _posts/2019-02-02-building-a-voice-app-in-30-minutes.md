@@ -18,9 +18,11 @@ Lets also assume that we will use JavaScript for building the Voice App - it is 
 
 ## Set things up
 
-The first step involved making sure that [Node.js](https://nodejs.org/) is  installed. Once you are done with that, you can then tell the Node package manager, npm, to initialize a project and install the Violet dependencies:
+The first step involved making sure that [Node.js](https://nodejs.org/) is  installed. Once you are done with that, lets create a project. Lets say we want the app to help with planning Game Nights. So we create a folder for the project, and then tell the Node package manager, npm, to initialize a project and install the Violet dependencies:
 
 ```shell
+mkdir gameNight
+cd gameNight
 npm init -y
 npm install violet --save
 ```
@@ -59,18 +61,18 @@ We could write out a script of how a user might want to start asking:
 > User: What can you do?  
 > App: I can help you with planning Game Nights
 
-We can implement the above easily, by telling the framework that the user is going to be making a `choice`, during which we will be `expecting` a prompt from the user, and the app should respond back by doing a `say`. This ends up looking like:
+We can implement the above easily, by telling the framework that the user is going to be making a `choice`, during which we will be `expecting` a prompt from the user, and the app should respond back by doing a `say`. The conversational flow ends up looking like:
 
 ```html
-<!-- -->
+<!-- flowScript -->
 <choice id="launch">
   <expecting>What can you do?</expecting>
   <say>I can help you with planning Game Nights</say>
 </choice>
-<!-- -->
+<!-- flowScript -->
 ```
 
-Ddd an `id` allows us refer the element later, and in this case we use the reserved id: `launch` which means that the above script is also triggered when the user just launches your app, for example by saying: "Alexa, open Game Night".
+Adding an `id` allows us refer the element later, and in this case we use the reserved id: `launch` which means that the above script is also triggered when the user just launches your app, for example by saying: "Alexa, open Game Night".
 
 So, lets now plan a more central conversation with the App. It could look like:
 
@@ -83,7 +85,7 @@ So, lets now plan a more central conversation with the App. It could look like:
 The above is a little more involved, and supporting it can be done by adding a nested `decision` for the user to make when being we `ask` a question. Writing out the flow give us:
 
 ```html
-<!-- -->
+<!-- flowScript -->
 <choice id="list">
   <expecting>What game nights have already been planned?</expecting>
   <say>Let me see.</say>
@@ -100,7 +102,7 @@ The above is a little more involved, and supporting it can be done by adding a n
     </choice>
   </decision>
 </choice>
-<!-- -->
+<!-- flowScript -->
 ```
 
 In the above, the `resolve` tag tells the framework to call application logic that was provided earlier.
@@ -110,7 +112,7 @@ In the above, the `resolve` tag tells the framework to call application logic th
 We have a simple conversation built above. It helps to test things often - especially with Voice Apps. With that in mind, lets create dummy App Logic so that the code runs and we can test it.
 
 ```javascript
-// An Extremely Simple Model
+// An Extremely Simple Model (to hold the data)
 var model = {
     pastGameNights: [],
     futureGameNights: []
@@ -129,7 +131,9 @@ var app = {
 
 Now when you type `npm start` in the console you can run the app. Violet comes with a built in web tooling and should let you run test the code on your local machine.
 
-Go to the url - likely http://localhost:8080/ - in your web browser. Feel free to pick an `intent` (think of it as a bit of speech that a user would make) and submit a request.
+Go to the url - likely http://localhost:8080/ - in your web browser. Feel free to pick an `intent` (think of it as a bit of speech that a user would make) and send a request.
+
+<img src="/assets/uploads/2019/02/screenshot.png" alt="screenshot"/>
 
 The request will mock how an external service will talk to your Voice app that you are just running.
 
@@ -137,7 +141,7 @@ Now you can test the app - make sure the conversation flows as expected!
 
 ## Building the Logic
 
-Now that we have the basic conversation built, we can build the App Logic. In the above, all we need are two methods `getPastGameNights(...)` and `getUpcomingGameNights(...)`.
+Now that we have the basic conversation built, we can build the App Logic. From the earlier snippet, all we need are two methods `getPastGameNights(...)` and `getUpcomingGameNights(...)`.
 
 If we just assume that the data will be in memory, the logic becomes as simple as:
 
