@@ -3,7 +3,7 @@ layout: page
 title: Articles & Talks
 ---
 <style type="text/css">
-  ul {
+  .post-content ul {
     margin-top: -15px;
     margin-bottom: 30px;
   }
