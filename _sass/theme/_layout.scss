@@ -124,7 +124,7 @@
 }
 
 .hr-above {
-  border-top: 1px solid $grey-color-light;  
+  border-top: 1px solid $grey-color-light;
 }
 
 /**
@@ -237,7 +237,7 @@
   border-radius: 3px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
-.post-list h2 {
+.post-list h1 {
   margin-bottom: 0px;
 }
 
@@ -275,7 +275,7 @@
 
 .post-title {
   /* h1 */
-  font-size: 20px;
+  // font-size: 20px;
   // letter-spacing: -1px;
   // line-height: 1;
 
