@@ -22,8 +22,17 @@
 
     <div class="trigger">
       <nav class="site-nav">
-        <a {% if page.url == '/blog/' %}class="menu-item active"{% else %}class="menu-item" href="/blog/"{% endif %}>Writings</a>
-        <a {% if page.url == '/talks' %}class="menu-item active"{% else %}class="menu-item" href="/talks"{% endif %}>Articles &amp; Talks</a>
+        {% assign yyyyIfAvail = page.url | remove_first: '/' | split: '/' | first %}
+        {% assign yyyyIfAvailLen = yyyyIfAvail | size %}
+        <!-- z{{ yyyyIfAvailLen }}z -->
+        {% if page.url == '/blog/' %}
+          <a class="menu-item active">Articles</a>
+        {% elsif yyyyIfAvailLen == 4 %}
+          <a class="menu-item active" href="/blog/">Articles</a>
+        {% else %}
+          <a class="menu-item" href="/blog/">Articles</a>
+        {% endif %}
+        <a {% if page.url == '/talks' %}class="menu-item active"{% else %}class="menu-item" href="/talks"{% endif %}>Events</a>
         <a {% if page.url == '/projects' %}class="menu-item active"{% else %}class="menu-item" href="/projects"{% endif %}>Projects</a>
         <a {% if page.url == '/about' %}class="menu-item active"{% else %}class="menu-item" href="/about"{% endif %}>About</a>
       </nav>
