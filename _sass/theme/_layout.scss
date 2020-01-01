@@ -93,9 +93,12 @@
       margin-right: 20px;
     }
   }
-  .active:before {
-    content: '>> ';
+  .active {
+    border-bottom: 4px double black;
   }
+  // .active:before {
+  //   content: '>> ';
+  // }
   .active:hover {
     text-decoration: none;
   }
