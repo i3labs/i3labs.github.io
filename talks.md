@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Articles & Talks
+title: "Events: Articles & Talks"
 ---
 <style type="text/css">
   .post-content ul {
@@ -9,14 +9,14 @@ title: Articles & Talks
   }
 </style>
 
-_[ Key presentations/publications are in bold below. ]_
+_[ Presentations and publications launching major initiatives are in bold below. ]_
 
 Vineet Sinha, "Practically Building Great Voice Experiences", Dreamforce 2018.
 
 * Developer oriented session focusing on how to think about building sophisticated voice apps.
 * [Video](https://www.salesforce.com/video/3579625/) recording.
 
-Vineet Sinha, "Practically Building Great Voice Experiences", VOICE Summit 2018.
+Vineet Sinha, **"Practically Building Great Voice Experiences"**, VOICE Summit 2018.
 
 * User-experience designers oriented session focusing on design patterns for building sophisticated voice apps.
 * [Slides](https://www.slideshare.net/vineet-sinha/building-great-voice-experiences) and [Video](https://www.youtube.com/watch?v=14L08pg8aK8).
@@ -37,15 +37,15 @@ Vineet Sinha, Elias Volanakis (Innoopract GmbH), Anthony Hunter (IBM), "Conqueri
 * See slides for [part 1](https://www.slideshare.net/vineet-sinha/conquering-gef-part-1-effectively-creating-a-well-designed-graphical-editor) and [part 2](https://www.slideshare.net/vineet-sinha/conquering-gef-part2-building-graphical-webapps-with-eclipse).
 
 
-**Vineet Sinha, David Karger, Rob Miller, "Relo: Helping Users Manage Context during Interactive Exploratory Visualization of Large Codebases", [8 pages, paper - [pdf](http://relo.csail.mit.edu/documentation/relo-vlhcc06.pdf) ] Visual Languages and Human-Centric Computting (VL/HCC 2006). Sep. 4-8, 2006, Brighton, United Kingdom.**
+Vineet Sinha, David Karger, Rob Miller, **"Relo: Helping Users Manage Context during Interactive Exploratory Visualization of Large Codebases"**, [8 pages, paper - [pdf](http://relo.csail.mit.edu/documentation/relo-vlhcc06.pdf) ] Visual Languages and Human-Centric Computing (VL/HCC 2006). Sep. 4-8, 2006, Brighton, United Kingdom.
 
-Vineet Sinha, David Karger, Rob Miller, "Relo: Helping Users Manage Context during Interactive Exploratory Visualization of Large Codebases", [5 pages, paper - [pdf](http://relo.csail.mit.edu/documentation/relo-etx05.pdf)] OOPSLA'05 Eclipse Technology eXchange (ETX) Workshop. Oct. 16-20, 2005, San Diega, California, USA.
+Vineet Sinha, David Karger, Rob Miller, "Relo: Helping Users Manage Context during Interactive Exploratory Visualization of Large Codebases", [5 pages, paper - [pdf](http://relo.csail.mit.edu/documentation/relo-etx05.pdf)] OOPSLA'05 Eclipse Technology eXchange (ETX) Workshop. Oct. 16-20, 2005, San Diego, California, USA.
 
 Neeraj Sangal, Ev Jordan, Vineet Sinha, and Daniel Jackson. _“Using Dependency Models to Manage Complex Software Architecture”_. [paper - [pdf](http://sdg.csail.mit.edu/pubs/2005/oopsla05-dsm.pdf)] 20th Annual ACM SIGPLAN Conference on Object-Oriented Programming Systems ([OOPSLA 2005](http://www.oopsla.org/2005/ShowPage.do?id=Home)).
 
 David R. Karger, Karun Bakshi, David Huynh, Dennis Quan, Vineet Sinha: "Haystack: A General-Purpose Information Management Tool for End Users Based on Semistructured Data". Second Biennial Conference on Innovative Data Systems Research ([CIDR 2005](http://www-db.cs.wisc.edu/cidr/cidr2005/index.html)). Jan. 4-7, 2005.
 
-**Vineet Sinha and David Karger. “Magnet: Supporting Navigation in Semistructured Data Environments” [paper - [pdf](http://haystack.csail.mit.edu/documents/papers/2005/magnet-sigmod2005.pdf)] In the Proceedings of the 24th ACM SIGMOD International Conference on Management of Data ([SIGMOD-2005](http://cimic.rutgers.edu/sigmodpods05/)), June 14-16 2005\.**
+Vineet Sinha and David Karger. **“Magnet: Supporting Navigation in Semistructured Data Environments”** [paper - [pdf](http://haystack.csail.mit.edu/documents/papers/2005/magnet-sigmod2005.pdf)] In the Proceedings of the 24th ACM SIGMOD International Conference on Management of Data ([SIGMOD-2005](http://cimic.rutgers.edu/sigmodpods05/)), June 14-16 2005\.
 
 Vineet Sinha, David Karger, and David F. Huynh. "Assisted Browsing for Semistructured Data" [extended abstract - [pdf](http://people.csail.mit.edu/vineet/www2003-nav-extabs.pdf)][poster - [ppt](http://people.csail.mit.edu/vineet/www2003-nav-poster.ppt)] Poster in the Twelfth International World Wide Web Conference ([WWW-2003](http://www2003.org/)), May 2003.
 
