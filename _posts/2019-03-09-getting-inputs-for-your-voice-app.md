@@ -6,7 +6,7 @@ date:   2019-03-09 00:00:00 -0500
 categories: Voice Development
 author: Vineet Sinha
 ---
-<img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
+<img src="/assets/uploads/2019/03/speech-icon-2797263_200.png" alt="speak " width="100"/>
 
 You have built a Voice App and it works well. You needed to use voice to expose data that you already had. It took a few iterations, but now users are happy with it. Your next challenge is needing to having your Voice App get data from the user.
 
@@ -168,4 +168,5 @@ If you are looking for a version of this article for the Salesfore platform - th
 
 See the code for this project here: [gameNight.js](https://github.com/vineet-sinha/violet-trailhead/blob/master/gameNight.js)
 
+**Image Credit:** [Kaufdex](https://pixabay.com/users/Kaufdex-2137215/) from [Pixabay](https://pixabay.com/).  
 **Updated:** 22nd Aug - minor details to align with the Violet 1.0 release.

@@ -6,7 +6,7 @@ date:   2019-02-02 00:00:00 -0500
 categories: Voice Development
 author: Vineet Sinha
 ---
-<img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
+<img src="/assets/uploads/2019/02/alexa-interact.png" alt="interact with alexa" width="100"/>
 
 You have mastered building web apps. Maybe even building mobile apps. But what about these smart speakers that are now sitting in people's living rooms? What about our new found ability to talk to apps on our phones?
 
@@ -213,7 +213,8 @@ But, before that try building a Voice App yourself and let me [@VineetSinha](htt
 
 If you are looking for a version of this article for the Salesfore platform - there is trailhead Quick Start on [Violet](https://trailhead.salesforce.com/en/content/learn/projects/quickstart-violet).
 
-See the code for this project here: [gameNight.js](https://github.com/vineet-sinha/violet-trailhead/blob/master/gameNight.js)
+**Code:** See the code for this project here: [gameNight.js](https://github.com/vineet-sinha/violet-trailhead/blob/master/gameNight.js).
 
+**Image Credit:** [Alexa Voice App with People](https://flic.kr/p/23nqPf2) by [Brother UK](https://www.brotherspark.co.uk/).
 **Updated:** 9th Mar - added link to follow up post.  
 **Updated:** 22nd Aug - minor details to align with the Violet 1.0 release.

@@ -6,7 +6,7 @@ date:   2019-08-07 00:00:00 -0500
 categories: Voice
 author: Vineet Sinha
 ---
-<img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
+<img src="/assets/uploads/2019/08/noun_voice_2824521-2.png" alt="voice phone" width="100"/>
 
 Smart speakers are here, and they are not only changing how we interact with technology, but also how we get things done. As everyday users increasingly rely on them and businesses ramp up to use them, Voice Apps are now the new frontier for app design. Have you wondered what it would take to design an app that runs on them?
 
@@ -69,4 +69,6 @@ The nature of Voice as a computing interface and the recent technological advanc
 
 What do you think? I would love to hear your thoughts.
 
+**Image Credit:**
+[Voice](https://thenounproject.com/term/voice/2824521/) by [Eucalyp](https://thenounproject.com/eucalyp/) from [the Noun Project](https://thenounproject.com/).  
 **Updated: 5th Jan 2020 -** General improvements.

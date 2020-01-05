@@ -6,7 +6,7 @@ date:   2018-10-01 00:00:00 -0500
 categories: Projects Voice
 author: Vineet Sinha
 ---
-<img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
+<img src="/assets/uploads/2018/10/converse-learn.png" alt="learning and conversations" width="100"/>
 
 The last year has been a fun ride. Since we open-sourced and started talking about the ideas behind Violet we have been able to learn lessons from the experiences of how some of the best Voice Apps have been built.
 
@@ -43,3 +43,5 @@ I am going to be sharing more of these lessons here in the upcoming months.
 ## Thanks!
 
 The learning this year for all of us would not have been possible without the collaboration of a number of people. In particular, I want to thank [Mitchell Harris](https://www.linkedin.com/in/mitchell-harris-6b44b923/) at the [RAIN Agency](https://rain.agency/), [Steve Tingris](https://www.linkedin.com/in/tingiris/) at [Dabble Lab](https://dabblelab.com/), and [Diana Deibel](https://www.linkedin.com/in/diana-deibel-8454b64/) at [Grand Studio](http://grandstudio.com/) for collaborating on these ideas.
+
+**Image Credit:** [People using messenger](https://flic.kr/p/23DLmzm) by [Brother UK](https://www.brotherspark.co.uk/)
