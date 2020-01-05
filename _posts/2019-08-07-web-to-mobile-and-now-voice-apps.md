@@ -8,56 +8,65 @@ author: Vineet Sinha
 ---
 <img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
 
-Smart speakers have arrived and they are not only changing how we interact with technology, but also how we get things done. As everyday users increasing rely on them and businesses are quickly ramping up to use them, Voice Apps are now the new frontier for app design. Have you wondered what it would take to design an app that runs on them?
+Smart speakers are here, and they are not only changing how we interact with technology, but also how we get things done. As everyday users increasingly rely on them and businesses ramp up to use them, Voice Apps are now the new frontier for app design. Have you wondered what it would take to design an app that runs on them?
 
-People use their smart speakers for just about everything - from listening to music, catching up on the news, checking the weather, and setting daily reminders. By 2021, it is expected that the [use of smart speakers will top tablets](https://www.canalys.com/newsroom/canalys-global-smart-speaker-installed-base-to-top-200-million-by-end-of-2019).<!--more-->
+People use now using their voice and smart speakers for just about everything - from listening to music, catching up on the news, checking the weather, and setting daily reminders. By 2021, forecasts show that the [use of smart speakers will top tablets](https://www.canalys.com/newsroom/canalys-global-smart-speaker-installed-base-to-top-200-million-by-end-of-2019).<!--more-->
 
-And it goes beyond just smart speakers – with most phones having built in Voice capabilities, users are starting to use voice applications there as well.
+Voice interactions go beyond just smart speakers – with most phones having built-in Voice capabilities, users are starting to use voice applications there as well.
 
-Part of the reason behind this growth in voice usage – is that voice is a ‘natural’ interface. In other words, we as humans know how to talk very soon after we are born. And, on top of that, we just generally prefer using voice to interact with others, as opposed to some form of text messages. The interface can be as intuitive as a conversation. Voice however, does come with its challenges…
+Part of the reason behind this growth in voice usage – is that Voice is a ‘natural’ interface. In other words, we as humans know how to talk very soon after we are born. We see this in that we generally prefer using voice to interact with others, as opposed to text messages. Voice as an interface can be as intuitive as a typical conversation. Voice, however, does come with its challenges…
 
-## A little context
+## A Little Context
 
-The first smart-phone apps, before the iPhone - were clunky, awkward and difficult to use. Designers had not yet figured out how to properly stuff all the capabilities of computers and the internet into such a tiny device. It was like the first time we had to stuff an entire 4-person tent into a bag the size of a fanny pack. It was possible, but we just couldn’t make sense of it at the time.
+The first smart-phone apps were clunky, awkward, and hard to use. App builders had not yet figured out how to properly expose the capabilities of computers into such tiny devices.
 
-Then came the next generation of mobile apps. They took the features that made their fellow web apps so revolutionary and useful and styled it completely for the smart phone screen. Programmers acknowledged that smart phones required their own sense of design.
+When the iPhone launched, app builders learned how to take features and style it for the smart-phone screen. And end-users rewarded these well-designed apps.
 
-However, web and mobile apps have a lot of things in common. They function in the exact same ways. They have buttons, text fields, dropdown menus, to name just a few of the things we take for granted. Therefore, It didn’t take an overload of imagination to reformat web apps to fit smartphones.
+Even though web design and mobile app design are different, they do have a lot of things in common - from buttons to text fields and dropdown menus to name a few. Voice apps have similar parallels, designing them is different, but they do have a lot in common with web and mobile apps.
 
-## But Voice is Different
+## A Unique Medium
 
-Voice apps are a brand-new form of technological engagement. Rather than just tweaking existing apps to better fit touchscreens and smartphone operating systems, voice apps require an entirely different way of thinking about user interfaces and how the app interacts with us. There are some real challenges to this.
+It is worth starting with noticing that in many ways, Voice is unique as an interaction medium.
 
-For one, voice is a wholly temporal thing. While not exactly tangible, it is something that changes with the whims of human beings. We are masters of whining, yelling, and mumbling. Text and push buttons lack nuance but they also make it far easier to just command things to do as they are told and to expect an exact result. There’s no emotion attached to the action.  
+Voice Apps (and conversations in general) are temporal. When you speak - and therefore provide a voice-based request, you need to wait for the response to finish before moving on with your task. Users cannot speed through the apps. The temporal property means that users can quickly become bored or impatient.
 
-Users can quickly become bored or impatient with voice apps. Currently, voice apps have a wide set of functions but not a whole lot of depth to them. In other words, they offer a pretty shallow experience in exchange for being highly functional and fast. Mobile and web apps, however, are designed to be highly engaging and with a depth that leaves users interacting with them longer.
+Voice Apps are also hard to use privately. Since requests to apps need to be spoken and often the response is said aloud, interactions by default become public.
 
-Users can’t really speed through a voice app. You say your command, wait for the appropriate result and then move on to the next thing. At the moment, smart speakers and their apps require processing time as they take in the request.  Furthermore, voice apps can only process one or two commands at time, thus users cannot swiftly run through a vocal interface.
+Lastly, voice is pretty ineffective with many types of information - from things like lists to showing relationships between items. Anything involving the use of visuals like graphs or tables can be challenging, communicating purely with voice.
 
-Voice apps are also anything but private. Vocalizing commands and hearing the app respond is a public action. Moreover, whispering tends to be ineffective since the app while barely understand the user and then respond in with full volume. Someone looking to work incognito will have a stressful time entering in their social security number or searching for their favorite adult site.
 
-Lastly, voice is pretty ineffective with things like lists, relationships between items, or anything involving processing of visuals like graphs and charts. It goes back to voice apps being a shallow experience with brief engagement. Something as simple as listing becomes incredibly difficult without visual interfaces to organize and understand them.
+## Opportunities and Challenges
 
-## Voice is Similar
+The Uniqueness of Voice does come with incredible opportunities. The most obvious one is that Voice Apps take advantage of an interaction paradigm that we, as humans, are very familiar with - even before being exposed to any technology. Voice interfaces being intuitive allows more people to use them easily and lowers training costs when getting them adopted. However, what gets often forgotten is that Voice Apps still need to be designed so that they can be intuitive, i.e., they need to support usage in many situations.
 
-The fundamentals of app interaction remain the same. What we call events for mobile and web apps, are known as intents with voice apps. It is just how those actions are taken that has changed. Clicking and tapping were intuitive ways to interact with an app’s features and this is more or less the same for vocal intents for voice apps.
+To put it simply, an intuitive Voice App for a Pizzeria will likely need to support many requests including "send me a pizza", "which of your pizza's are the healthiest", and "how long would it take for a pizza to arrive here". While it is not necessary to support every request, picking which requests would be supported and especially what will not be supported needs to be done carefully.
 
-At the end of the day all apps are simply designed to help a user complete an action of some sort. The only difference is in how those actions are instigated and the depth of engagement each app has. In this regard, voice apps are incredibly efficient. Vocal commands are effortless and when it comes to simple tasks voice apps are incredibly fast and intuitive.
+The temporal nature of voice means that people are generally comfortable receiving and providing short responses. These quick responses allow for increased usage but also means that smart speaker users are often multi-tasking when leveraging Voice App and therefore need functionality that does not get in the way of what they are doing. The need for efficient conversations also means that users often demand Voice Apps being able to grow with them so that they can be used quickly.
 
-In this regard, the shallow engagement is actually a strength. Voice apps have to remain quick and efficient to please users. Holding their attention for extended periods is a waste of time and potential. Voice app designers are thus incentivized for making voice apps even better at accomplishing specific tasks as efficiently as possible.
+The inability of Voice Apps to be used privately does result in challenges but also calls for considering the usage of Voice Apps in a similar manner that private conversations happen today. In addition, the public nature of voice inspires looking into collaborative and multi-user scenarios when thinking about Voice Apps.
 
-Web, mobile and voice apps still operate within the fundamentals of basic app design. They all need to work with intuitive nesting. These take the forms of menus, sub menus, tabs, and accordions. Thus, the organization of the app’s functions remain entirely the same with voice apps. What changes is how the user navigates through them.
 
-Additionally, they also gather, process and provide data in the same ways. For an app to properly function and evolve, it needs to collect data as it used. This function remains unchanged regardless of how users are interacting with the app be it voice commands or button-pushing.
+## Similarities with all Apps
 
-To create a truly great app on any platform be it smart speakers or smart phones, designers need to work with developers to create truly great and functional apps. Voice apps are an exciting new frontier because they will force creators to rethink how users and technology interact. Not only must intents and results be quick and easy, but Alexa and Google Voice need to be able to respond in intuitive and natural ways. Apps now must be capable of real conversation to reach their full potential.
+While there are a lot of opportunities and challenges when considering voice as a medium, it is, however, worth remembering that there are a lot of similarities.
 
-## Conclusion
+To start with, creating a truly great app on any platform, be it smart-speakers or smart-phones, means having designers work closely with developers. With Voice Apps, designers often end up taking the lead on making the conversation feel great and balance those needs with the actions that the user needs to take. At the same time, developers take the lead in building out the logic for the App.
 
-While the differences between voice and traditional web and mobile apps are profound, don’t let this intimidate you from developing your own. You will certainly have to design it outside the framework of a web app. However, the fundamentals remain the same. If anything, the voice app simplifies the goals of a developer. The most important thing is for the voice app to accomplish its tasks quickly and easily, long-term engagement is no longer a primary motivator.
+In addition, most fundamentals of app interaction remain the same with Voice. What we call events for mobile and web apps, are known as intents with Voice Apps. It is just how those interactions are done that have changed. Clicking and tapping are intuitive ways to interact with an App’s features, and this is similar to utterances spoken by people (i.e., intents) for Voice Apps.
 
-It is important to get started now on learning how to build up a viable voice app. Technology is exponentially improving and thus changing. Getting in early gives you the opportunity to both learn it and eventually shape how it grows.
+Whether on the web, mobile, or voice based - all apps are simply designed to help a user complete an action of some sort. To do this, they gather, process, and provide data - often using what is referred to as a 'form' with each piece of value being accessed using a 'control' of some sort. This core mechanism of interacting with apps remains unchanged regardless of where users are pushing buttons or providing voice commands.
 
-There are multiple ways to start. If you are not technically inclined or new to app development, [Alexa Skills Blueprints](https://blueprints.amazon.com/) is an excellent place to start. If you are experienced technically then using [Violet](https://helloviolet.ai/), an open source application-framework for building voice apps will suit you just fine.
+At the end of the day - all apps operate within the fundamentals of basic app design. They need to have intuitive nesting of these controls, which can take the forms of menus, sub-menus, tabs, and accordions. So while the organization of app’s functions remains the same with Voice Apps, what changes is how the user navigates through them.
 
-Voice apps are fast becoming the dominant way in which we interact with our smart devices. Knowing that smart speakers are well on the way to overtaking tablets and that companies are working to make smart phones more vocally enabled, means that’s now is as good a time as ever to get in on the action. If you have any takes on this exciting new technology, we would love to hear your thoughts!
+
+## From here
+
+If the differences between a Voice App and other types of apps scares you, remember that the fundamentals are similar in many ways. With the growing usage of Voice Apps, it is a good idea to get started building them. Doing so will allow you to internalize the differences and the strengths of the medium.
+
+There are multiple ways to start. If you are not technically inclined or new to app development, [Alexa Skills Blueprints](https://blueprints.amazon.com/) is an excellent place to start. If you are experienced technically, then using [Violet](https://helloviolet.ai/), an open-source application-framework for building Voice Apps will suit you just fine.
+
+The nature of Voice as a computing interface and the recent technological advances makes it an exciting opportunity.
+
+What do you think? I would love to hear your thoughts.
+
+**Updated: 5th Jan 2020 -** General improvements.
