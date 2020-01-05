@@ -3,7 +3,7 @@ layout: post
 title:  "Getting Inputs for your Voice App"
 image:  "/assets/uploads/2017/11/violet.png"
 date:   2019-03-09 00:00:00 -0500
-categories: Voice
+categories: Voice Development
 author: Vineet Sinha
 ---
 <img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>

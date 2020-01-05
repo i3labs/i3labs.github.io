@@ -3,7 +3,7 @@ layout: post
 title:  "Building a Voice App in 30 minutes"
 image:  "/assets/uploads/2017/11/violet.png"
 date:   2019-02-02 00:00:00 -0500
-categories: Voice
+categories: Voice Development
 author: Vineet Sinha
 ---
 <img src="/assets/uploads/2017/11/violet.png" alt="violet" width="100"/>
