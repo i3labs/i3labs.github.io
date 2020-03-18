@@ -211,10 +211,10 @@ Hope you found this helpful. In the next article we look into how we could [get 
 
 But, before that try building a Voice App yourself and let me [@VineetSinha](https://twitter.com/VineetSinha) know how it goes.
 
-If you are looking for a version of this article for the Salesfore platform - there is trailhead Quick Start on [Violet](https://trailhead.salesforce.com/en/content/learn/projects/quickstart-violet).
+[//]: # If you are looking for a version of this article for the Salesfore platform - there is trailhead Quick Start on [Violet](https://trailhead.salesforce.com/en/content/learn/projects/quickstart-violet).
 
 **Code:** See the code for this project here: [gameNight.js](https://github.com/vineet-sinha/violet-trailhead/blob/master/gameNight.js).
 
-**Image Credit:** [Alexa Voice App with People](https://flic.kr/p/23nqPf2) by [Brother UK](https://www.brotherspark.co.uk/).
+**Image Credit:** [Alexa Voice App with People](https://flic.kr/p/23nqPf2) by [Brother UK](https://www.brotherspark.co.uk/).  
 **Updated:** 9th Mar - added link to follow up post.  
 **Updated:** 22nd Aug - minor details to align with the Violet 1.0 release.
