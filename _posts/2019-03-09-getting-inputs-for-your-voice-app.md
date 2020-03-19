@@ -59,7 +59,7 @@ var app = {
 
 ## Custom Types
 
-Often one of the predefined types do not work for us. In such situations we can define a custom type. For example, if we wanted to only accept a week day, we could do somehting like:
+Often one of the predefined types do not work for us. In such situations we can define a custom type. For example, if we wanted to only accept a week day, we could do something like:
 
 ```javascript
 violet.addInputTypes({
