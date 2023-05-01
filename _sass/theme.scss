@@ -43,3 +43,8 @@ $on-laptop:        800px;
   "theme/layout",
   "theme/syntax-highlighting"
 ;
+
+.section {
+  margin-bottom: 20px;
+  @extend %clearfix;
+}
