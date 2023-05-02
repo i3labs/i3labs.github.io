@@ -17,4 +17,4 @@ He has done these at Microsoft, Accenture Technology Labs, Motorola, as well as 
 
 **Contact:** Vineet can be reached via e-mail at [vineet.sinha@gmail.com](mailto:vineet.sinha@gmail.com), on twitter at [@VineetSinha](https://twitter.com/VineetSinha) and on LinkedIn at [https://www.linkedin.com/in/VineetSinha](https://www.linkedin.com/in/VineetSinha).
 
-**Disclaimer:** The views expressed on this site are entirely my own and in no way affiliated with Salesforce or any other organizations I am involved with.
+**Disclaimer:** The views expressed on this site are entirely my own and in no way affiliated with any other organizations I am involved with.
