@@ -1,64 +1,63 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: default
+layout: single-page
 ---
-<div class="homepage content" style="margin-bottom:20px;">
-  <div style="float:left;width:calc( (640px/4) - (30px/4) );">
-    <div id="vineet-picture"></div>
-    <div style="text-align:center;font-weight:bold;">Vineet Sinha</div>
-    <div style="line-height:1.2em;margin-top:10px;"><i><small>Opinions here are based on my experiences and do not represent views of any organization that I might be affiliated with.</small></i></div>
-  </div>
-  <div style="float:left;max-width:calc( (640px*3/4) - (30px*3/4) );margin-left:20px;">
-    <p>I love challenging norms and technologies to make users' lives better. These days, I am exploring a lot of Emerging Technologies, especially Voice and AI. <a href="/about">Read more &rsaquo;&rsaquo;</a></p>
-
-    <!-- <div class="section-title"><a class="no-link" name="subscribe">Follow Me</a></div> -->
-    <div style="float:left;max-width:calc( 640px - 30px );">
-      <p style="margin-bottom:0px"><a class="no-link" name="subscribe">I am writing articles and updates once every 2-3 months, sign up to get notified by e-mail:</a></p>
-      <!-- Signup Form -->
-      <script async data-uid="0079c9daaf" src="https://exceptional-mover-6501.ck.page/0079c9daaf/index.js"></script>
-      <style>
-        .formkit-form { margin-top: 10px;}
-        .formkit-field {flex: 100 1 auto!important; margin-right: 5px!important;}
-        .formkit-submit {flex: 1 1 auto!important; margin-left: 5px!important;}
-        .formkit-submit > span {background-color:#072261;}
-      </style>
-
-      <p>Follow on <a href="https://twitter.com/VineetSinha">Twitter</a>, <a href="https://www.linkedin.com/in/VineetSinha">LinkedIn</a>, or <a href="https://medium.com/@VineetSinha">Medium</a>.</p>
-    </div>
-
+<div class="section">
+  <div>
+    <p>AI has the power to radically transform businesses - to not only reduce waste but to help existing employees drive more value and play a critical role for any organization.</p>
+    <p> With 20+ years experience in this space we are helping businesses side-step large projects and instead get quick results.</p>
+    <p>Need help on a project? Schedule a
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/vineet-sinha/i3labs-ai-strategy-call'});return false;">strategy call</a>.
+      <!-- Calendly link widget end -->
+      Alternatively, reach out on <a href="https://twitter.com/VineetSinha">Twitter</a> or <a href="https://www.linkedin.com/in/VineetSinha">LinkedIn</a>.</p>
   </div>
 </div>
 
-<div class="homepage half-col">
-  <div class="section-title">Writings</div>
-  <ul class="post-list-x" style="list-style:none;margin-left:0px;">
-    {% for post in site.posts limit: 3 %}
-      <li>
-        <a class="post-link-x" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        <div class="post-meta">
-          In
-          {% for category in post.categories %}
-                <a href="{{ "/category/" | relative_url }}{{category | replace:"&amp;","&" | slugify}}">{{category}}</a>{% if forloop.last == false %}, {% endif %}
-          {% endfor %}
-          on {{ post.date | date: "%b %-d, %Y" }}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-  <p><a href="/blog">See More &rsaquo;&rsaquo;</a></p>
-</div>
-
-<div class="homepage half-col">
-  <div class="section-title">Projects</div>
-  <p>
-    <a class="post-link-x" href="https://HelloViolet.ai">Violet</a> - An application framework to ease building great Voice Applications, by allowing you to seperate out Conversational Flow form Business Logic.
+<div class="section">
+  <h2>Our Approach</h2>
+  <p>We approach every project driven to make it succeed. Our 20+ years experience with AI means we help make decisions so that business results can be gotten quickly, keeping a few things in mind:
+    <ol>
+      <li><b>AI as a Differentiator:</b> - The fact that AI is considered cool is leading to most organizations wanting to adopt it. But, the largest opportunity of AI rewards comes to those that that are able to question core businesses assumptions.</li>
+      <li><b>Business ROI and Use-Case Aligned:</b> - AI efforts often focus on back-end considerations like LLM training and other data-engineering considerations. Instead we start with business needs and use-cases.</li>
+      <li><b>Value and Risk Aware Roadmapping</b> - It is common for Software projects to deliver value near the end of the effort. In contrast, we work with clients to find results that can be delivered before large restructuring efforts need to take place.</li>
+    </ol>
   </p>
-  <p>
-    <a class="post-link-x" href="https://implicit.io">Implicit.io</a> - An Education Platform for helping you stay up to date with techniques at your work.
+  <p>We work with origanizations to identify what an AI transformation effort would look like for them. We look for opportunities for delivering 90% of the value with 10% of the effort.
   </p>
 </div>
 
-<div class="homepage content" style="margin-bottom:20px;">
+<div class="section">
+  <h2>Featured Projects</h2>
+  <p><b>Generative Product Images for Commerce:</b> Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user's interests. Challenges that were overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>'s commerce API's, and providing an easy to use interfaces for SMB'.</p>
+
+  <p><b>Automated Organization of Curated Insights:</b> Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highlighy badly curated insights.</p>
+
+  <p><b>Modern Voice Development:</b> <a href="https://helloviolet.ai/">Violet</a> focuses on increasing enterprise adoption of Voice Applications by building a framework that manages probabilities of matching intents with a simple HTML like language. Taking lessons from Web and Mobile UI development, Violet tries to help separate out Design from Business Logic.</p>
+
+  <p><b>Advanced Analytics for Education:</b> Worked with <a href="https://www.cengage.com/">Cengage</a> and <a href="https://www.mheducation.com/">McGraw Hill Education</a> to bring together product based data-warehouses and real time analytics to deliver insights to users. Helped define the <a href="http://www.imsglobal.org/activity/caliper">Caliper</a> standard for collection of data, and took the lead in the development of vendor neutral validation of data for integrating analytics across multiple tools.</p>
+
+  <p><b>Productivity with Software Architecture</b>: Helping experienced developers with the 90% of time that they sepnd on figuring out code. Designed to help with large software projects by blending algorithms, common visual representations, and user interactions. <a href="https://www.architexa.com/">Architexa</a> was spun out from MIT, and included support for Class Diagramming, Layered Architectures, and Sequence Diagrams.
+
+  <p><b>Navigation for Semistructured Data:</b> Developed techiniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval) Dabase, and User Interface techniquest to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a> as well as personal information (e-mail, calendar, notes, etc).</p>
+
+</div>
+
+<div class="section">
+  <h2>Stay in the loop</h2>
+
+  <!-- <div class="section-title"><a class="no-link" name="subscribe">Follow Me</a></div> -->
+  <div style="float:left;max-width:calc( 640px - 30px );">
+    <p style="margin-bottom:0px"><a class="no-link" name="subscribe">We share lessons as we go on this journey. You can follow by subscribing to our newsletter:</a></p>
+    <!-- Signup Form -->
+    <script async data-uid="0079c9daaf" src="https://exceptional-mover-6501.ck.page/0079c9daaf/index.js"></script>
+    <style>
+      .formkit-form { margin-top: 10px;}
+      .formkit-field {flex: 100 1 auto!important; margin-right: 5px!important;}
+      .formkit-submit {flex: 1 1 auto!important; margin-left: 5px!important;}
+      .formkit-submit > span {background-color:#072261;}
+    </style>
+
+  </div>
 </div>
