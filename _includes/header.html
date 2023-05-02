@@ -22,6 +22,7 @@
 
     <div class="trigger">
       <nav class="site-nav">
+        <a {% if page.url == '/personal' %}class="menu-item active"{% else %}class="menu-item" href="/personal"{% endif %}>Personal</a>
         {% assign yyyyIfAvail = page.url | remove_first: '/' | split: '/' | first %}
         {% assign yyyyIfAvailLen = yyyyIfAvail | size %}
         <!-- z{{ yyyyIfAvailLen }}z -->
