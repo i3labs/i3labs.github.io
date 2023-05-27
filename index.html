@@ -20,9 +20,118 @@ layout: single-page
   </div>
 </div>
 
+{% raw %}
 <div class="section">
   <h2>Our Projects</h2>
-  <p><b>More Useful ChatGPT:</b> The power of ChatGPT has been undeniable, but most employees are having a hard time understanding how to usefully benefit from the platform. <a href="https://cone.ai/">Cone</a> brings together prompt libraries, LLM's and knowledge-worker workflow tools together to boost employee productivity.</p>
+
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/petite-vue?module'
+    createApp({
+      selected: 0,
+      projects: [
+        {
+          image: 'https://cone.ai/cone-logo.svg',
+          name: 'More Useful ChatGPT',
+          description: 'The power of ChatGPT has been undeniable, but most employees are having a hard time understanding how to usefully benefit from the platform. <a href="https://cone.ai/">Cone</a> brings together prompt libraries, LLM\'s and knowledge-worker workflow tools together to boost employee productivity.'
+        },
+        {
+          image: 'https://implicit.io/logo-sq-v2.png',
+          name: 'Coaching powered by GPT',
+          description: 'Students learn concepts when they apply ideas, but instructors are usually not around then. Implicit allows professionals to recieve coaching using a instructor setup trained GPT with course material, allowing students to access course concepts when needed.'
+        },
+        {
+          image: 'https://www.qmocha.com/static/favicon.ico',
+          name: 'Generative Product Images for Commerce',
+          description: 'Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user\'s interests. Challenges that were overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>\'s commerce API\'s, and providing an easy to use interfaces for SMB\'s.'
+        },
+        {
+          image: 'https://www.salesforce.com/c/public/app/assets/favicon.ico',
+          name: 'Automated Organization of Curated Insights',
+          description: 'Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highly badly curated insights.'
+        },
+        {
+          image: 'https://helloviolet.ai/assets/images/logo.png',
+          name: 'Modern Voice Development',
+          description: '<a href="https://helloviolet.ai/">Violet</a> focuses on increasing enterprise adoption of Voice Applications by building a framework that manages probabilities of matching intents with a simple HTML like language. Taking lessons from Web and Mobile UI development, Violet tries to help separate out Design from Business Logic.'
+        },
+        {
+          image: 'https://www.mheducation.com/etc/designs/unitas/components/content/globalheader/css/MGH_Logo_RGB.svg',
+          name: 'Advanced Analytics for Education',
+          description: 'Worked with <a href="https://www.cengage.com/">Cengage</a> and <a href="https://www.mheducation.com/">McGraw Hill Education</a> to bring together product based data-warehouses and real time analytics to deliver insights to users. Helped define the <a href="http://www.imsglobal.org/activity/caliper">Caliper</a> standard for collection of data, and took the lead in the development of vendor neutral validation of data for integrating analytics across multiple tools.'
+        },
+        {
+          image: 'https://www.architexa.com/images/logo-icon.png',
+          name: 'Productivity with Software Architecture',
+          description: 'Helping experienced developers with the 90% of time that they sepnd on figuring out code. Designed to help with large software projects by blending algorithms, common visual representations, and user interactions. <a href="https://www.architexa.com/">Architexa</a> was spun out from MIT, and included support for Class Diagramming, Layered Architectures, and Sequence Diagrams.'
+        },
+        {
+          image: 'https://haystack.csail.mit.edu/favicon.ico',
+          name: 'Navigation for Semistructured Data',
+          description: 'Developed techniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval), Database, and User Interface techniques to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a> as well as personal information (e-mail, calendar, notes, etc).'
+        },
+      ],
+
+      autoSelect() {
+        // console.log('increment selection now');
+        this.selected++;
+        if (this.selected>this.projects.length-1) this.selected = 0;
+        setTimeout(()=>{this.autoSelect()}, 5*1000);
+      },
+    }).mount()
+  </script>
+
+  <div class="proj-container" v-scope @vue:mounted="autoSelect">
+    <div class="details">
+      <div style="margin-bottom: 10px;"><b>{{projects[selected].name}}</b></div>
+      <div v-html="projects[selected].description"></div>
+    </div>
+    <div class="icons">
+      <div v-for="(p,ndx) in projects" @click="selected=ndx" style="cursor: pointer;" class="p-icon" :class="{selected:selected==ndx}">
+        <img style="height: 100px; margin: 0 auto; display: block;" :src="p.image"/>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+  </div>
+  <style>
+    .selected {
+      background-color: lightgray;
+    }
+    .proj-container {
+      /* background-color: green; */
+      padding: 5px; margin: 5px;
+    }
+    .proj-container .icons {
+      /* background-color: blue; */
+      padding: 5px; margin: 5px;
+    }
+    .proj-container .details {
+      /* background-color: yellow; */
+      padding: 5px; margin: 15px;
+      float: right;
+      height: calc(4*(100px + 15px));
+      width: 45%;
+    }
+    .p-icon {
+      /* background-color: red; */
+      padding: 5px; margin: 5px;
+      width: 20%;
+      height: 100px;
+      float: left;
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+
+
+{% endraw %}
+
+  <!-- <p><b>More Useful ChatGPT:</b> The power of ChatGPT has been undeniable, but most employees are having a hard time understanding how to usefully benefit from the platform. <a href="https://cone.ai/">Cone</a> brings together prompt libraries, LLM's and knowledge-worker workflow tools together to boost employee productivity.</p>
+
+  <p><b>Coaching powered by GPT:</b> Students learn concepts when they apply ideas, but instructors are usually not around then. Implicit allows professionals to recieve coaching using a instructor setup trained GPT with course material, allowing students to access course concepts when needed.</p>
 
   <p><b>Generative Product Images for Commerce:</b> Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user's interests. Challenges that were overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>'s commerce API's, and providing an easy to use interfaces for SMB'.</p>
 
@@ -34,7 +143,7 @@ layout: single-page
 
   <p><b>Productivity with Software Architecture</b>: Helping experienced developers with the 90% of time that they sepnd on figuring out code. Designed to help with large software projects by blending algorithms, common visual representations, and user interactions. <a href="https://www.architexa.com/">Architexa</a> was spun out from MIT, and included support for Class Diagramming, Layered Architectures, and Sequence Diagrams.
 
-  <p><b>Navigation for Semistructured Data:</b> Developed techniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval), Database, and User Interface techniques to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a> as well as personal information (e-mail, calendar, notes, etc).</p>
+  <p><b>Navigation for Semistructured Data:</b> Developed techniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval), Database, and User Interface techniques to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a> as well as personal information (e-mail, calendar, notes, etc).</p> -->
 
 </div>
 
