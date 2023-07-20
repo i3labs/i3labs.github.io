@@ -6,7 +6,7 @@ layout: landing-page
 
 <header class="site-header" role="banner" style="text-align: center;border: none;">
   <div class="site-title" style="font-size: 32px;padding-top: 5rem;color: #222;">
-    Prioritize time to leverage with AI
+    Get quicker results with AI
   </div>
 </header>
 
@@ -17,11 +17,12 @@ layout: landing-page
     <!-- <div style="float:right; width:264px; margin-top: 40px;">
       <div style="background-image: url('/assets/i3-positioning.png');height: 200px;background-repeat: no-repeat;"></div>
     </div> -->
-    <p style="text-align: center;padding: 2rem 0;">
+    <p style="text-align: center;padding-top: 2rem;padding-bottom: 3rem;">
       <a style="background-color:#072261;color:#fff;padding:12px 24px;border-radius: 5px;" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/vineet-sinha/i3labs-ai-strategy-call'});return false;">Schedule a free AI strategy call!</a>
     </p>
     <!-- <p>Need help on a project? Schedule a free to learn how AI can bring transformational results to you.</p>-->
     <!-- <div style="float:left;max-width: 300px;"> -->
+      <h2>The Tough Reality</h2>
       <p>AI is radically transforming businesses. The best part is that it reduces inefficiencies and allows us to double down on our strengths - whether it is our existing team, product, or customers.</p>
       <p>Most AI projects focus on organizing data and algorithms over prioritizing business results. Doing that is risky, and we do it <a href="#approach">differently</a>.</p>
     <!-- </div> -->
@@ -32,7 +33,6 @@ layout: landing-page
 {% raw %}
 <div class="section">
   <h2>Our Work</h2>
-  <p>We help boost both startups and new efforts at Fortune 50 companies. Our focus is on AI driven Strategy, Transformation, Architecture, &amp; Software Developement.</p>
 
   <script type="module">
     import { createApp } from 'https://unpkg.com/petite-vue?module'
@@ -85,7 +85,7 @@ layout: landing-page
         // console.log('increment selection now');
         this.selected++;
         if (this.selected>this.projects.length-1) this.selected = 0;
-        setTimeout(()=>{this.autoSelect()}, 5*1000);
+        setTimeout(()=>{this.autoSelect()}, 10*1000);
       },
     }).mount()
   </script>
@@ -95,13 +95,13 @@ layout: landing-page
       <div v-for="(p,ndx) in projects" @click="selected=ndx" style="cursor: pointer;" class="p-icon" :class="{selected:selected==ndx}">
         <img :src="p.image"/>
       </div>
-      <div class="clearfix">&nbsp;</div>
+      <div class="clearfix" style="height: 0px;">&nbsp;</div>
     </div>
     <div class="details">
       <div style="margin-bottom: 10px;"><b>{{projects[selected].name}}</b></div>
       <div v-html="projects[selected].description"></div>
     </div>
-    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix" style="height: 0px;">&nbsp;</div>
   </div>
   <style>
     .selected {
@@ -119,22 +119,23 @@ layout: landing-page
     }
     .proj-container .details {
       /* background-color: yellow; */
-      padding: 5px; margin: 15px;
-      float: right;
-      height: calc(4*(80px + 15px));
-      width: 50%;
+      padding: 5px;
+      margin: 15px auto 0px auto;
+      /* float: right; */
+      height: 225px;
+      width: 80%;
     }
     .p-icon {
       /* background-color: red; */
       padding: 5px; margin: 5px;
-      width: 85px;
+      width: 55px;
       /* height: 100px; */
       /* float: left; */
       display: inline-block;
     }
     .p-icon img {
       border-radius: 8px;
-      height: 80px;
+      height: 50px;
       margin: 0 auto;
       display: block;
     }
@@ -144,8 +145,8 @@ layout: landing-page
       display: table;
     }
     .icons {
-      float:left;
-      width:250px;
+      /* float:left; */
+      /* width:250px; */
     }
     @media only screen and (max-width: 768px) { /* For mobile phones: */
       .details {
@@ -188,6 +189,7 @@ layout: landing-page
 
   <p><b>Navigation for Semistructured Data:</b> Developed techniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval), Database, and User Interface techniques to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a> as well as personal information (e-mail, calendar, notes, etc).</p> -->
 
+  <p>We help boost both startups and new efforts at Fortune 50 companies. Our focus is on AI driven Strategy, Transformation, Architecture, &amp; Software Developement.</p>
 </div>
 
 <div class="section">
