@@ -1,0 +1,261 @@
+---
+layout: landing-page
+---
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<header class="site-header" role="banner" style="text-align: center;border: none;">
+  <div class="site-title" style="font-size: 32px;padding-top: 5rem;color: #222;">
+    Get quicker results with AI
+  </div>
+</header>
+
+<div class="wrapper"><div class="content">
+<div class="section" style="border-bottom: 1px solid #e8e8e8;">
+  <div>
+    <p style="text-align: center;">20+ years side-stepping large AI backend projects to create real business impact</p>
+    <!-- <div style="float:right; width:264px; margin-top: 40px;">
+      <div style="background-image: url('/assets/i3-positioning.png');height: 200px;background-repeat: no-repeat;"></div>
+    </div> -->
+    <p style="text-align: center;padding-top: 2rem;padding-bottom: 3rem;">
+      <a style="background-color:#0263E0;color:#fff;padding:12px 24px;border-radius: 5px;font-size: 16px;" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/vineet-sinha/i3labs-ai-strategy-call'});return false;">Let's talk strategy!</a>
+    </p>
+    <!-- <p>Need help on a project? Schedule a free to learn how AI can bring transformational results to you.</p>-->
+    <!-- <div style="float:left;max-width: 300px;"> -->
+      <h2>The Tough Reality</h2>
+      <p>AI is radically transforming businesses. The best part is that it reduces inefficiencies and allows us to double down on our strengths - whether it is our existing team, product, or customers.</p>
+      <p>Most AI projects focus on organizing data and algorithms over prioritizing business results. Doing that is risky, and we do it <a href="#approach">differently</a>.</p>
+    <!-- </div> -->
+    <img style="margin:0 auto; width: 90%;padding-bottom: 2rem;display: block;" src="/assets/i3-positioning-stack-v2.jpg"/>
+  </div>
+</div>
+
+{% raw %}
+<div class="section">
+  <h2>Our Work</h2>
+
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/petite-vue?module'
+    createApp({
+      selected: 0,
+      projects: [
+        {
+          image: '/assets/logo/cone.svg',
+          name: 'More Useful ChatGPT',
+          description: '<p>The power of ChatGPT has been undeniable, but most employees are having a hard time understanding how to usefully benefit from the platform.</p><p><a href="https://cone.ai/">Cone</a> brings together prompt libraries, LLM\'s and knowledge-worker workflow tools together to boost employee productivity.</p>'
+        },
+        {
+          image: '/assets/logo/implicit.png',
+          name: 'Coaching powered by GPT',
+          description: '<p>Students learn concepts when they apply ideas, but instructors are usually not around then.</p><p>Recap allows professionals to recieve coaching using a instructor setup trained GPT with course material, allowing students to access course concepts when needed.</p>'
+        },
+        {
+          image: '/assets/logo/qmocha.png',
+          name: 'Generative Product Images for Commerce',
+          description: '<p>E-Commerce profits are highly dependent on the quality of product images.</p><p>Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user\'s interests. Challenges that were overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>\'s commerce API\'s, and providing an easy to use interfaces for SMB\'s.</p>'
+        },
+        {
+          image: '/assets/logo/salesforce.svg',
+          name: 'Automated Organization of Curated Insights',
+          description: '<p>Large collections of manually curate insights can be a challenge to use.</p><p>Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highlight badly curated insights.</p>'
+        },
+        {
+          image: '/assets/logo/violet.png',
+          name: 'Modern Voice Development',
+          description: '<p>Building sophisticate voice applications can be a challenge to manage probabilistic intent recogntiion, conversation design, and business logic.</p><p><a href="https://helloviolet.ai/">Violet</a> focuses on increasing enterprise adoption of Voice Applications by building a framework that manages probabilities of matching intents with a simple HTML like language. Taking lessons from Web and Mobile UI development, Violet tries to help separate out Design from Business Logic.</p>'
+        },
+        {
+          image: '/assets/logo/mhe.svg',
+          name: 'Advanced Analytics for Education',
+          description: '<p>Getting students actionable insights into their performance is not always easy.</p><p>Worked with <a href="https://www.cengage.com/">Cengage</a> and <a href="https://www.mheducation.com/">McGraw Hill Education</a> to bring together product based data-warehouses and real time analytics to deliver insights to users.</p><p>Helped define the <a href="http://www.imsglobal.org/activity/caliper">Caliper</a> standard for collection of data, and took the lead in the development of vendor neutral validation of data for integrating analytics across multiple tools.</p>'
+        },
+        {
+          image: '/assets/logo/architexa.png',
+          name: 'Productivity with Software Architecture',
+          description: '<p>Experienced software developers spend 90% of their time on figuring out code.</p><p><a href="https://www.architexa.com/">Architexa</a> was designed to help with large software projects by blending algorithms, common visual representations, and user interactions. It was spun out from MIT, and included support for Class Diagramming, Layered Architectures, and Sequence Diagrams.</p>'
+        },
+        {
+          image: '/assets/logo/csail.png',
+          name: 'Navigation for Semistructured Data',
+          description: '<p>Easily going through data that is not well structured is hard.</p><p>Developed techniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval), Database, and User Interface techniques to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a>) as well as personal information (e-mail, calendar, notes, etc).</p>'
+        },
+      ],
+
+      autoSelect() {
+        // console.log('increment selection now');
+        this.selected++;
+        if (this.selected>this.projects.length-1) this.selected = 0;
+        setTimeout(()=>{this.autoSelect()}, 10*1000);
+      },
+    }).mount()
+  </script>
+
+  <div class="proj-container" v-scope @vue:mounted="autoSelect">
+    <div class="icons">
+      <div v-for="(p,ndx) in projects" @click="selected=ndx" style="cursor: pointer;" class="p-icon" :class="{selected:selected==ndx}">
+        <img :src="p.image"/>
+      </div>
+      <div class="clearfix" style="height: 0px;">&nbsp;</div>
+    </div>
+    <div class="details">
+      <div style="margin-bottom: 10px;"><b>{{projects[selected].name}}</b></div>
+      <div v-html="projects[selected].description"></div>
+    </div>
+    <div class="clearfix" style="height: 0px;">&nbsp;</div>
+  </div>
+  <style>
+    .selected {
+      /* background-color: lightgray; */
+      border: 2px solid lightgray;
+      margin: 3px !important;
+    }
+    .proj-container {
+      /* background-color: green; */
+      padding: 5px; margin: 5px;
+    }
+    .proj-container .icons {
+      /* background-color: blue; */
+      padding: 5px; margin: 5px;
+    }
+    .proj-container .details {
+      /* background-color: yellow; */
+      padding: 5px;
+      margin: 15px auto 0px auto;
+      /* float: right; */
+      height: 225px;
+      width: 80%;
+    }
+    .p-icon {
+      /* background-color: red; */
+      padding: 5px; margin: 5px;
+      width: 55px;
+      /* height: 100px; */
+      /* float: left; */
+      display: inline-block;
+    }
+    .p-icon img {
+      border-radius: 8px;
+      height: 50px;
+      margin: 0 auto;
+      display: block;
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .icons {
+      /* float:left; */
+      /* width:250px; */
+    }
+    @media only screen and (max-width: 768px) { /* For mobile phones: */
+      .details {
+        margin-bottom: 0px;
+      }
+      .icons {
+        width: auto;
+      }
+      .proj-container .details {
+        width: auto;
+        height: auto;
+      }
+      .p-icon {
+        width: 60px;
+        height: 50px;
+      }
+      .p-icon img {
+        height: 50px;
+      }
+
+    }
+  </style>
+
+
+{% endraw %}
+
+  <!-- <p><b>More Useful ChatGPT:</b> The power of ChatGPT has been undeniable, but most employees are having a hard time understanding how to usefully benefit from the platform. <a href="https://cone.ai/">Cone</a> brings together prompt libraries, LLM's and knowledge-worker workflow tools together to boost employee productivity.</p>
+
+  <p><b>Coaching powered by GPT:</b> Students learn concepts when they apply ideas, but instructors are usually not around then. Implicit allows professionals to recieve coaching using a instructor setup trained GPT with course material, allowing students to access course concepts when needed.</p>
+
+  <p><b>Generative Product Images for Commerce:</b> Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user's interests. Challenges that were overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>'s commerce API's, and providing an easy to use interfaces for SMB'.</p>
+
+  <p><b>Automated Organization of Curated Insights:</b> Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highly badly curated insights.</p>
+
+  <p><b>Modern Voice Development:</b> <a href="https://helloviolet.ai/">Violet</a> focuses on increasing enterprise adoption of Voice Applications by building a framework that manages probabilities of matching intents with a simple HTML like language. Taking lessons from Web and Mobile UI development, Violet tries to help separate out Design from Business Logic.</p>
+
+  <p><b>Advanced Analytics for Education:</b> Worked with <a href="https://www.cengage.com/">Cengage</a> and <a href="https://www.mheducation.com/">McGraw Hill Education</a> to bring together product based data-warehouses and real time analytics to deliver insights to users. Helped define the <a href="http://www.imsglobal.org/activity/caliper">Caliper</a> standard for collection of data, and took the lead in the development of vendor neutral validation of data for integrating analytics across multiple tools.</p>
+
+  <p><b>Productivity with Software Architecture</b>: Helping experienced developers with the 90% of time that they sepnd on figuring out code. Designed to help with large software projects by blending algorithms, common visual representations, and user interactions. <a href="https://www.architexa.com/">Architexa</a> was spun out from MIT, and included support for Class Diagramming, Layered Architectures, and Sequence Diagrams.
+
+  <p><b>Navigation for Semistructured Data:</b> Developed techniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval), Database, and User Interface techniques to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a> as well as personal information (e-mail, calendar, notes, etc).</p> -->
+
+  <p>We help boost both startups and new efforts at Fortune 50 companies. Our focus is on AI driven Strategy, Transformation, Architecture, &amp; Software Developement.</p>
+</div>
+
+<div class="section">
+  <h2 id="approach">How we Work</h2>
+  <p>We help organizations succeed with AI projects in a few different ways:
+    <ol>
+      <li>We help <b>developers</b> break down challenging AI problems, reuse components from our library, deliver results in an agile manner, and to adopt mindsets for AI success.</li>
+      <li>We help projects scale by reviewing <b>techinal architecture</b> and making sure teams understand opportunities for improving results.</li>
+      <li>We work with <b>product teams</b> to help prioritize projects to make an impact and make sure that the AI efforts are part of a larger suite of capabilities to maximiaze value to users.</li>
+      <li>We work with <b>marketing &amp; sales teams</b> to help align their missions with AI capabilities, and for steakholders alignment for upcoming AI features.</li>
+    </ol>
+  </p>
+  <p>Our work ranges from hands-on work, to advising key projects members, and training teams.
+  </p>
+</div>
+<div class="section">
+  <h2 id="philosophy">Philosophy</h2>
+  <p>Our goal with every project is to make it succeed. Our experience with AI means we help make decisions so that business results can be gotten quickly. We focus on 3 pillars:
+    <ul>
+      <li><b>Value and Risk Aware Roadmapping:</b> Technology projects loose sight of who they try to help. We make sure to understand what value really means and try to find low-hanging fruit instead of only delivering value at the end. Our work with clients helps to make results concrete before larger restructuring efforts need to take place.</li>
+      <li><b>ROI and Use-Case Aligned:</b> AI efforts don't need to only focus on back-end considerations like LLM training and other data-engineering considerations. By starting with business needs and use-cases we help speed-up organizational alignment and frequently both uncover and solve hidden problems.</li>
+      <li><b>AI as a Differentiator:</b> AI is considered cool theses days, and that makes most organizations want to adopt it. But, the largest opportunities with AI comes to those that are able to question core businesses assumptions. We build a track record of success for AI at companies, to help them differentiate themselves with AI.</li>
+    </ul>
+  </p>
+  <p>We work with organizations to identify what an AI transformation effort would look like for them. We look for opportunities for delivering 90% of the value with 10% of the effort.
+  </p>
+</div>
+
+<p style="text-align: center;padding: 1rem;">
+  <a style="background-color:#0263E0;color:#fff;padding:12px 24px;border-radius: 5px;font-size: 16px;" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/vineet-sinha/i3labs-ai-strategy-call'});return false;">Book a free AI strategy call!</a>
+</p>
+
+<div class="section">
+  <h2>About Us</h2>
+  <div><div style="float:left;width:calc( (640px/4) - (30px/4) );">
+    <div id="vineet-picture"></div>
+    <div style="text-align:center;font-weight:bold;">Vineet Sinha</div>
+    <div style="text-align:center;"><i>Principal / Founder</i></div>
+    <!-- <div style="line-height:1.2em;margin-top:10px;"><i><small>Principal / Founder</small></i></div> -->
+    <!-- <div style="line-height:1.2em;margin-top:10px;"><i><small>Opinions here are based on my experiences and do not represent views of any organization that I might be affiliated with.</small></i></div> -->
+  </div>
+  <div class="section" style="float:left;max-width:calc( (640px*3/4) - (30px*3/4) );margin-left:20px;">
+    <p>i3Labs was started by Vineet Sinha after noticing both the opportunity that computers bring as well as the challenges in making sure technologies meet users pains and help them with solutions.</p>
+
+    <p>Vineet loves exploring technologies to make users' lives better. Beyond invesigating ideas while doing his PhD in Artificial Intelligence at MIT CSAIL, he has also worked with Microsoft, Accenture Technology Labs, Motorola, Salesforce, and many startups.</p>
+    <p>Feel free to reach out on <a href="https://twitter.com/VineetSinha">Twitter</a> or <a href="https://www.linkedin.com/in/VineetSinha">LinkedIn</a>.</p>
+
+  </div></div>
+  <div class="clearfix">&nbsp;</div>
+<!-- </div>
+
+<div class="section"> -->
+  <!-- <h2>Stay in the loop</h2> -->
+
+  <!-- <div class="section-title"><a class="no-link" name="subscribe">Follow Me</a></div> -->
+  <div>
+    <p style="margin-bottom:0px">Stay in the loop. We are sharing lessons as we go on this journey. You can follow by subscribing to our newsletter:</p>
+    <!-- Signup Form -->
+    <script async data-uid="0079c9daaf" src="https://exceptional-mover-6501.ck.page/0079c9daaf/index.js"></script>
+    <style>
+      .formkit-form { margin-top: 10px;}
+      .formkit-field {flex: 100 1 auto!important; margin-right: 5px!important;}
+      .formkit-submit {flex: 1 1 auto!important; margin-left: 5px!important;}
+      .formkit-submit > span {background-color: white; border:1px solid #0263E0; color:#0263E0; border-radius: 5px;}
+    </style>
+
+  </div>
+</div>
+</div> <!-- content --> </div> <!-- wrapper -->
