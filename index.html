@@ -6,6 +6,11 @@ layout: landing-page
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+  Babel.registerPreset('classic-react', {
+    presets: [[Babel.availablePresets['react'], { runtime: 'classic' }]]
+  });
+</script>
 
 <style>
   .selected { border: 2px solid lightgray; margin: 3px !important; }
@@ -40,7 +45,7 @@ layout: landing-page
 <div id="app-root"></div>
 
 {% raw %}
-<script type="text/babel">
+<script type="text/babel" data-presets="classic-react">
 const { useState, useEffect, useRef } = React;
 
 const PROJECTS = [
