@@ -15,7 +15,7 @@ layout: landing-page
 <style>
   .selected { border: 2px solid lightgray; margin: 3px !important; }
   .proj-container { padding: 5px; margin: 5px; }
-  .proj-container .icons { padding: 5px; margin: 5px; }
+  .proj-container .icons { padding: 5px; margin: 5px; text-align: center; }
   .proj-container .details {
     padding: 5px;
     margin: 15px auto 0px auto;
@@ -48,7 +48,25 @@ layout: landing-page
 <script type="text/babel" data-presets="classic-react">
 const { useState, useEffect, useRef } = React;
 
-const PROJECTS = [
+const OUTCOMES = [
+  {
+    image: '/assets/logo/salesforce.svg',
+    name: 'Automated Organization of Curated Insights',
+    description: '<p>Large collections of manually curated insights can be a challenge to use.</p><p>Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highlight badly curated insights.</p>'
+  },
+  {
+    image: '/assets/logo/mhe.svg',
+    name: 'Advanced Analytics for Education',
+    description: '<p>Getting students actionable insights into their performance is not always easy.</p><p>Worked with <a href="https://www.cengage.com/">Cengage</a> and <a href="https://www.mheducation.com/">McGraw Hill Education</a> to bring together product-based data-warehouses and real-time analytics to deliver insights to users. Helped define the <a href="http://www.imsglobal.org/activity/caliper">Caliper</a> standard for data collection, and led the development of vendor-neutral validation for integrating analytics across multiple tools.</p>'
+  },
+  {
+    image: '/assets/logo/qmocha.png',
+    name: 'Generative Product Images for Commerce',
+    description: '<p>E-Commerce profits are highly dependent on the quality of product images.</p><p>Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user\'s interests. Challenges overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>\'s commerce APIs, and providing easy-to-use interfaces for SMBs.</p>'
+  },
+];
+
+const EXPLORATIONS = [
   {
     image: '/assets/logo/cone.svg',
     name: 'More Useful ChatGPT',
@@ -60,24 +78,9 @@ const PROJECTS = [
     description: '<p>Students learn concepts when they apply ideas, but instructors are usually not around then.</p><p>Recap allows professionals to receive coaching using an instructor-setup trained GPT with course material, allowing students to access course concepts when needed.</p>'
   },
   {
-    image: '/assets/logo/qmocha.png',
-    name: 'Generative Product Images for Commerce',
-    description: '<p>E-Commerce profits are highly dependent on the quality of product images.</p><p>Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user\'s interests. Challenges overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>\'s commerce APIs, and providing easy-to-use interfaces for SMBs.</p>'
-  },
-  {
-    image: '/assets/logo/salesforce.svg',
-    name: 'Automated Organization of Curated Insights',
-    description: '<p>Large collections of manually curated insights can be a challenge to use.</p><p>Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highlight badly curated insights.</p>'
-  },
-  {
     image: '/assets/logo/violet.png',
     name: 'Modern Voice Development',
     description: '<p>Building sophisticated voice applications can be a challenge — managing probabilistic intent recognition, conversation design, and business logic.</p><p><a href="https://helloviolet.ai/">Violet</a> focuses on increasing enterprise adoption of Voice Applications by building a framework that manages probabilities of matching intents with a simple HTML-like language. Taking lessons from Web and Mobile UI development, Violet helps separate Design from Business Logic.</p>'
-  },
-  {
-    image: '/assets/logo/mhe.svg',
-    name: 'Advanced Analytics for Education',
-    description: '<p>Getting students actionable insights into their performance is not always easy.</p><p>Worked with <a href="https://www.cengage.com/">Cengage</a> and <a href="https://www.mheducation.com/">McGraw Hill Education</a> to bring together product-based data-warehouses and real-time analytics to deliver insights to users. Helped define the <a href="http://www.imsglobal.org/activity/caliper">Caliper</a> standard for data collection, and led the development of vendor-neutral validation for integrating analytics across multiple tools.</p>'
   },
   {
     image: '/assets/logo/architexa.png',
@@ -107,22 +110,22 @@ function CTAButton({ children }) {
   );
 }
 
-function ProjectCarousel() {
+function ProjectCarousel({ items }) {
   const [selected, setSelected] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setSelected(s => (s + 1) % PROJECTS.length);
+      setSelected(s => (s + 1) % items.length);
     }, 10000);
     return () => clearInterval(timer);
-  }, []);
+  }, [items]);
 
-  const project = PROJECTS[selected];
+  const current = items[selected];
 
   return (
     <div className="proj-container">
       <div className="icons">
-        {PROJECTS.map((p, i) => (
+        {items.map((p, i) => (
           <div
             key={i}
             className={'p-icon' + (selected === i ? ' selected' : '')}
@@ -135,8 +138,8 @@ function ProjectCarousel() {
         <div className="clearfix" style={{height:'0px'}}>&nbsp;</div>
       </div>
       <div className="details">
-        <div style={{marginBottom:'10px'}}><b>{project.name}</b></div>
-        <div dangerouslySetInnerHTML={{__html: project.description}} />
+        <div style={{marginBottom:'10px'}}><b>{current.name}</b></div>
+        <div dangerouslySetInnerHTML={{__html: current.description}} />
       </div>
       <div className="clearfix" style={{height:'0px'}}>&nbsp;</div>
     </div>
@@ -182,9 +185,10 @@ function App() {
               <p style={{textAlign:'center',paddingTop:'1rem',paddingBottom:'2rem'}}>
                 <CTAButton>Find Your AI Gaps</CTAButton>
               </p>
-              <h2>The Tough Reality</h2>
-              <p>AI is radically transforming businesses. The best part is that it reduces inefficiencies and allows us to double down on our strengths - whether it is our existing team, product, or customers.</p>
-              <p>Most AI projects focus on organizing data and algorithms over prioritizing business results. Doing that is risky, and I do it <a href="#approach">differently</a>.</p>
+              <h2>The Trap</h2>
+              <p>Your teams are using AI. Maybe it's helping — a little. But the results aren't what you were promised, and you're not sure whether to push harder or step back.</p>
+              <p>Most organizations bolt AI onto existing work and call it transformation. What they get is a 15% productivity bump — and a creeping sense that something important got lost along the way.</p>
+              <p>The problem isn't the tools. It's where you put them.</p>
               <img
                 style={{margin:'0 auto',width:'90%',paddingBottom:'2rem',display:'block'}}
                 src="/assets/i3-positioning-stack-v2.jpg"
@@ -194,8 +198,8 @@ function App() {
           </div>
 
           <div className="section">
-            <h2>Our Work</h2>
-            <ProjectCarousel />
+            <h2>My Work</h2>
+            <ProjectCarousel items={OUTCOMES} />
             <p>I help boost both startups and new efforts at Fortune 50 companies. My focus is on AI driven Strategy, Transformation, Architecture, &amp; Software Development.</p>
           </div>
 
@@ -241,6 +245,14 @@ function App() {
               </div>
             </div>
             <div className="clearfix">&nbsp;</div>
+          </div>
+
+          <div className="section">
+            <h2>Tech Explorations</h2>
+            <ProjectCarousel items={EXPLORATIONS} />
+          </div>
+
+          <div className="section">
             <div>
               <p style={{marginBottom:'0px'}}>Stay in the loop. I'm sharing lessons as I go on this journey. You can follow by subscribing to my newsletter:</p>
               <NewsletterForm />
