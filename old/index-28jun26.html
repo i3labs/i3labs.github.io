@@ -1,0 +1,287 @@
+---
+layout: landing-page
+---
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+  Babel.registerPreset('classic-react', {
+    presets: [[Babel.availablePresets['react'], { runtime: 'classic' }]]
+  });
+</script>
+
+<style>
+  .selected { border: 2px solid lightgray; margin: 3px !important; }
+  .proj-container { padding: 5px; margin: 5px; }
+  .proj-container .icons { padding: 5px; margin: 5px; text-align: center; }
+  .proj-container .details {
+    padding: 5px;
+    margin: 15px auto 0px auto;
+    height: 225px;
+    width: 80%;
+  }
+  .p-icon {
+    padding: 5px; margin: 5px;
+    width: 55px;
+    display: inline-block;
+  }
+  .p-icon img { border-radius: 8px; height: 50px; margin: 0 auto; display: block; }
+  .clearfix::after { content: ""; clear: both; display: table; }
+  .formkit-form { margin-top: 10px; }
+  .formkit-field { flex: 100 1 auto !important; margin-right: 5px !important; }
+  .formkit-submit { flex: 1 1 auto !important; margin-left: 5px !important; }
+  .formkit-submit > span { background-color: white; border: 1px solid #0263E0; color: #0263E0; border-radius: 5px; }
+  @media only screen and (max-width: 768px) {
+    .details { margin-bottom: 0px; }
+    .icons { width: auto; }
+    .proj-container .details { width: auto; height: auto; }
+    .p-icon { width: 60px; height: 50px; }
+    .p-icon img { height: 50px; }
+  }
+</style>
+
+<div id="app-root"></div>
+
+{% raw %}
+<script type="text/babel" data-presets="classic-react">
+const { useState, useEffect, useRef } = React;
+
+const OUTCOMES = [
+  {
+    image: '/assets/logo/wef.svg',
+    name: 'Entrepreneurial Mentorship Network for a Global Community',
+    description: '<p>Connecting entrepreneurs with the right mentors at scale requires more than a directory.</p><p>Worked with the <a href="https://www.weforum.org/">World Economic Forum</a> to define and design an online social network linking the entrepreneurs they serve with mentors in their global community — mapping relationships, surfacing relevant connections, and enabling the kinds of high-value introductions that drive real growth.</p>'
+  },
+  {
+    image: '/assets/logo/ge-appliances.svg',
+    name: 'Services-Oriented Network Extension for a Legacy Brand',
+    description: '<p>Hardware-first companies often struggle to extend their brand promise into the services era.</p><p>Worked with <a href="https://www.geappliances.com/">GE Appliances</a> to articulate the core job-to-be-done and brand promise their customers relied on, then helped architect a services-oriented network extension — creating new value beyond the appliance itself while staying true to what made the brand trusted.</p>'
+  },
+  {
+    image: '/assets/logo/salesforce.svg',
+    name: 'Customer-Led Roadmaps for Enterprise Digital Transformation',
+    description: '<p>Digital transformation efforts stall when strategy outpaces technical grounding — and when the roadmap isn\'t anchored to the customer.</p><p>Embedded as a fractional CTO within <a href="https://www.salesforce.com/ignite/">Salesforce Ignite</a>, partnering directly with the C-suite of major enterprise customers to redefine their technology roadmaps. Helped organizations internalize Salesforce\'s core philosophy — building sales, marketing, and operations around the Customer — and translate it into concrete, executable strategy.</p>'
+  },
+  {
+    image: '/assets/logo/mhe.svg',
+    name: 'Advanced Analytics for Education',
+    description: '<p>Getting students actionable insights into their performance is not always easy.</p><p>Worked with <a href="https://www.cengage.com/">Cengage</a> and <a href="https://www.mheducation.com/">McGraw Hill Education</a> to bring together product-based data-warehouses and real-time analytics to deliver insights to users. Helped define the <a href="http://www.imsglobal.org/activity/caliper">Caliper</a> standard for data collection, and led the development of vendor-neutral validation for integrating analytics across multiple tools.</p>'
+  },
+  {
+    image: '/assets/logo/qmocha.png',
+    name: 'Generative Product Images for Commerce',
+    description: '<p>E-Commerce profits are highly dependent on the quality of product images.</p><p>Worked with <a href="https://qmocha.com/">QMocha</a> to help make products relevant by season, marketing campaign, or user\'s interests. Challenges overcome included generating images for large real-time use cases, integrating with <a href="https://www.shopify.com/">Shopify</a>\'s commerce APIs, and providing easy-to-use interfaces for SMBs.</p>'
+  },
+];
+
+const EXPLORATIONS = [
+  {
+    image: '/assets/logo/cone.svg',
+    name: 'More Useful ChatGPT',
+    description: '<p>The power of ChatGPT has been undeniable, but most employees are having a hard time understanding how to usefully benefit from the platform.</p><p><a href="https://cone.ai/">Cone</a> brings together prompt libraries, LLMs and knowledge-worker workflow tools together to boost employee productivity.</p>'
+  },
+  {
+    image: '/assets/logo/implicit.png',
+    name: 'Coaching powered by GPT',
+    description: '<p>Students learn concepts when they apply ideas, but instructors are usually not around then.</p><p>Recap allows professionals to receive coaching using an instructor-setup trained GPT with course material, allowing students to access course concepts when needed.</p>'
+  },
+  {
+    image: '/assets/logo/salesforce.svg',
+    name: 'Automated Organization of Curated Insights',
+    description: '<p>Large collections of manually curated insights can be a challenge to use.</p><p>Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highlight badly curated insights.</p>'
+  },
+  {
+    image: '/assets/logo/violet.png',
+    name: 'Modern Voice Development',
+    description: '<p>Building sophisticated voice applications can be a challenge — managing probabilistic intent recognition, conversation design, and business logic.</p><p><a href="https://helloviolet.ai/">Violet</a> focuses on increasing enterprise adoption of Voice Applications by building a framework that manages probabilities of matching intents with a simple HTML-like language. Taking lessons from Web and Mobile UI development, Violet helps separate Design from Business Logic.</p>'
+  },
+  {
+    image: '/assets/logo/architexa.png',
+    name: 'Productivity with Software Architecture',
+    description: '<p>Experienced software developers spend 90% of their time figuring out code.</p><p><a href="https://www.architexa.com/">Architexa</a> was designed to help with large software projects by blending algorithms, common visual representations, and user interactions. Spun out from MIT, it included support for Class Diagramming, Layered Architectures, and Sequence Diagrams.</p>'
+  },
+  {
+    image: '/assets/logo/csail.png',
+    name: 'Navigation for Semistructured Data',
+    description: '<p>Easily traversing data that is not well structured is hard.</p><p>Developed techniques to allow users to explore and refine (faceted navigation) when given access to semistructured repositories. System used a combination of Search (information retrieval), Database, and User Interface techniques to deploy on recipes data (from <a href="https://www.epicurious.com/">Epicurious</a>) as well as personal information (e-mail, calendar, notes, etc).</p>'
+  },
+];
+
+function CTAButton({ children }) {
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.Calendly.initPopupWidget({ url: 'https://calendly.com/vineet-sinha/ai-strategy-call' });
+  };
+  return (
+    <a
+      href=""
+      onClick={handleClick}
+      style={{backgroundColor:'#0263E0',color:'#fff',padding:'12px 24px',borderRadius:'5px',fontSize:'16px'}}
+    >
+      {children}
+    </a>
+  );
+}
+
+function ProjectCarousel({ items }) {
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSelected(s => (s + 1) % items.length);
+    }, 10000);
+    return () => clearInterval(timer);
+  }, [items]);
+
+  const current = items[selected];
+
+  return (
+    <div className="proj-container">
+      <div className="icons">
+        {items.map((p, i) => (
+          <div
+            key={i}
+            className={'p-icon' + (selected === i ? ' selected' : '')}
+            onClick={() => setSelected(i)}
+            style={{cursor:'pointer'}}
+          >
+            <img src={p.image} alt={p.name} />
+          </div>
+        ))}
+        <div className="clearfix" style={{height:'0px'}}>&nbsp;</div>
+      </div>
+      <div className="details">
+        <div style={{marginBottom:'10px'}}><b>{current.name}</b></div>
+        <div dangerouslySetInnerHTML={{__html: current.description}} />
+      </div>
+      <div className="clearfix" style={{height:'0px'}}>&nbsp;</div>
+    </div>
+  );
+}
+
+function NewsletterForm() {
+  const containerRef = useRef(null);
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const script = document.createElement('script');
+    script.async = true;
+    script.setAttribute('data-uid', '0079c9daaf');
+    script.src = 'https://exceptional-mover-6501.ck.page/0079c9daaf/index.js';
+    containerRef.current.appendChild(script);
+  }, []);
+  return <div ref={containerRef} />;
+}
+
+function App() {
+  return (
+    <>
+      <header className="site-header" role="banner" style={{textAlign:'center',border:'none'}}>
+        <div className="site-title" style={{fontSize:'32px',paddingTop:'1rem',paddingBottom:'1rem',color:'#222'}}>
+          Amplify, Don't Just Automate.
+        </div>
+      </header>
+
+      <div className="wrapper">
+        <div className="content">
+
+          <div className="section" style={{borderBottom:'1px solid #e8e8e8'}}>
+            <div>
+              <p style={{textAlign:'center'}}>
+                Teams that win won't be the ones who automated themselves to mediocrity.<br />
+                They'll be the ones who were amplified to their full potential.
+              </p>
+              <p style={{textAlign:'center',color:'#555',fontSize:'90%',fontStyle:'italic'}}>
+                Vineet Sinha — AI strategist and entrepreneur.<br />
+                20 years shipping AI proucts &amp; transformations at Microsoft, Salesforce, Accenture Labs, and more.<br />
+                MIT CSAIL PhD.
+              </p>
+              <p style={{textAlign:'center',paddingTop:'1rem',paddingBottom:'2rem'}}>
+                <CTAButton>Find Your AI Gaps</CTAButton>
+              </p>
+              <h2>The Trap</h2>
+              <p>Your teams are using AI. Maybe it's helping — a little. But the results aren't what you were promised, and you're not sure whether to push harder or step back.</p>
+              <p>Most organizations bolt AI onto existing work and call it transformation. What they get is a 15% productivity bump — and a creeping sense that something important got lost along the way.</p>
+              <p>The problem isn't the tools. It's where you put them.</p>
+              <img
+                style={{margin:'0 auto',width:'90%',paddingBottom:'2rem',display:'block'}}
+                src="/assets/i3-positioning-stack-v2.jpg"
+                alt="i3Labs positioning"
+              />
+            </div>
+          </div>
+
+          <div className="section">
+            <h2>Client Work</h2>
+            <p>Selected client engagements — outcomes I've delivered for organizations.</p>
+            <ProjectCarousel items={OUTCOMES} />
+            <p>I help boost both startups and new efforts at Fortune 50 companies. My focus is on AI driven Strategy, Transformation, Architecture, &amp; Software Development.</p>
+          </div>
+
+          <div className="section">
+            <h2 id="approach">How I Work</h2>
+            <p>I help organizations succeed with AI projects in a few different ways:</p>
+            <ol>
+              <li>I work with <b>marketing &amp; sales teams</b> to help align their missions with AI capabilities, and for stakeholder alignment for upcoming AI features.</li>
+              <li>I work with <b>product teams</b> to help prioritize projects to make an impact and make sure that the AI efforts are part of a larger suite of capabilities to maximize value to users.</li>
+              <li>I help projects scale by reviewing <b>technical architecture</b> and making sure teams understand opportunities for improving results.</li>
+              <li>I help <b>developers</b> break down challenging AI problems, reuse components from my library, deliver results in an agile manner, and to adopt mindsets for AI success.</li>
+            </ol>
+            <p>My work ranges from hands-on work, to advising key project members, and training teams.</p>
+          </div>
+
+          <div className="section">
+            <h2 id="philosophy">Philosophy</h2>
+            <p>My goal with every project is to make it succeed. My experience with AI means I help make decisions so that business results can be gotten quickly. I focus on 3 pillars:</p>
+            <ul>
+              <li><b>Value and Risk Aware Roadmapping:</b> Technology projects lose sight of who they try to help. I make sure to understand what value really means and try to find low-hanging fruit instead of only delivering value at the end. My work with clients helps to make results concrete before larger restructuring efforts need to take place.</li>
+              <li><b>ROI and Use-Case Aligned:</b> AI efforts don't need to only focus on back-end considerations like LLM training and other data-engineering considerations. By starting with business needs and use-cases I help speed-up organizational alignment and frequently both uncover and solve hidden problems.</li>
+              <li><b>AI as a Differentiator:</b> AI is considered cool these days, and that makes most organizations want to adopt it. But, the largest opportunities with AI comes to those that are able to question core businesses assumptions. I build a track record of success for AI at companies, to help them differentiate themselves with AI.</li>
+            </ul>
+            <p>I work with organizations to identify what an AI transformation effort would look like for them. I look for opportunities for delivering 90% of the value with 10% of the effort.</p>
+          </div>
+
+          <p style={{textAlign:'center',padding:'1rem'}}>
+            <CTAButton>Find Your AI Gaps</CTAButton>
+          </p>
+
+          <div className="section">
+            <h2>About</h2>
+            <div>
+              <div style={{float:'left',width:'calc( (640px/4) - (30px/4) )'}}>
+                <div id="vineet-picture"></div>
+                <div style={{textAlign:'center',fontWeight:'bold'}}>Vineet Sinha</div>
+                <div style={{textAlign:'center'}}><i>Principal / Founder</i></div>
+              </div>
+              <div className="section" style={{float:'left',maxWidth:'calc( (640px*3/4) - (30px*3/4) )',marginLeft:'20px'}}>
+                <p>I started i3Labs after noticing both the opportunity that computers bring and the challenges in making sure technologies meet users' needs.</p>
+                <p>I love exploring technologies to make people's lives better. Beyond my PhD in Artificial Intelligence at MIT CSAIL, I have worked with Microsoft, Accenture Technology Labs, Motorola, Salesforce, and many startups.</p>
+                <p>Feel free to reach out on <a href="https://twitter.com/VineetSinha">Twitter</a> or <a href="https://www.linkedin.com/in/VineetSinha">LinkedIn</a>.</p>
+              </div>
+            </div>
+            <div className="clearfix">&nbsp;</div>
+          </div>
+
+          <div className="section">
+            <h2>Tech Explorations</h2>
+            <p>Built, not just advised — where I have pushed technical limits myself.</p>
+            <ProjectCarousel items={EXPLORATIONS} />
+          </div>
+
+          <div className="section">
+            <div>
+              <p style={{marginBottom:'0px'}}>Stay in the loop. I'm sharing lessons as I go on this journey. You can follow by subscribing to my newsletter:</p>
+              <NewsletterForm />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('app-root')).render(<App />);
+</script>
+{% endraw %}
