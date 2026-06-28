@@ -50,9 +50,19 @@ const { useState, useEffect, useRef } = React;
 
 const OUTCOMES = [
   {
+    image: '/assets/logo/wef.svg',
+    name: 'Entrepreneurial Mentorship Network for a Global Community',
+    description: '<p>Connecting entrepreneurs with the right mentors at scale requires more than a directory.</p><p>Worked with the <a href="https://www.weforum.org/">World Economic Forum</a> to define and design an online social network linking the entrepreneurs they serve with mentors in their global community — mapping relationships, surfacing relevant connections, and enabling the kinds of high-value introductions that drive real growth.</p>'
+  },
+  {
+    image: '/assets/logo/ge-appliances.svg',
+    name: 'Services-Oriented Network Extension for a Legacy Brand',
+    description: '<p>Hardware-first companies often struggle to extend their brand promise into the services era.</p><p>Worked with <a href="https://www.geappliances.com/">GE Appliances</a> to articulate the core job-to-be-done and brand promise their customers relied on, then helped architect a services-oriented network extension — creating new value beyond the appliance itself while staying true to what made the brand trusted.</p>'
+  },
+  {
     image: '/assets/logo/salesforce.svg',
-    name: 'Automated Organization of Curated Insights',
-    description: '<p>Large collections of manually curated insights can be a challenge to use.</p><p>Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highlight badly curated insights.</p>'
+    name: 'Customer-Led Roadmaps for Enterprise Digital Transformation',
+    description: '<p>Digital transformation efforts stall when strategy outpaces technical grounding — and when the roadmap isn\'t anchored to the customer.</p><p>Embedded as a fractional CTO within <a href="https://www.salesforce.com/ignite/">Salesforce Ignite</a>, partnering directly with the C-suite of major enterprise customers to redefine their technology roadmaps. Helped organizations internalize Salesforce\'s core philosophy — building sales, marketing, and operations around the Customer — and translate it into concrete, executable strategy.</p>'
   },
   {
     image: '/assets/logo/mhe.svg',
@@ -76,6 +86,11 @@ const EXPLORATIONS = [
     image: '/assets/logo/implicit.png',
     name: 'Coaching powered by GPT',
     description: '<p>Students learn concepts when they apply ideas, but instructors are usually not around then.</p><p>Recap allows professionals to receive coaching using an instructor-setup trained GPT with course material, allowing students to access course concepts when needed.</p>'
+  },
+  {
+    image: '/assets/logo/salesforce.svg',
+    name: 'Automated Organization of Curated Insights',
+    description: '<p>Large collections of manually curated insights can be a challenge to use.</p><p>Helped <a href="https://www.salesforce.com/">Salesforce</a> automatically cluster and classify collected insights for thought-leadership efforts. Used a combination of <a href="https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder">Universal Sentence Encoder</a> and <a href="https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1">t-SNE</a> to identify emerging topics, group articles, and highlight badly curated insights.</p>'
   },
   {
     image: '/assets/logo/violet.png',
@@ -179,7 +194,7 @@ function App() {
               </p>
               <p style={{textAlign:'center',color:'#555',fontSize:'90%',fontStyle:'italic'}}>
                 Vineet Sinha — AI strategist and entrepreneur.<br />
-                20 years shipping AI products at Microsoft, Salesforce, Accenture Labs, and more.<br />
+                20 years shipping AI proucts &amp; transformations at Microsoft, Salesforce, Accenture Labs, and more.<br />
                 MIT CSAIL PhD.
               </p>
               <p style={{textAlign:'center',paddingTop:'1rem',paddingBottom:'2rem'}}>
